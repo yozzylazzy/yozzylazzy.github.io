@@ -1,22 +1,19 @@
+import React, { useRef, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CarousellImage from './section/home/carousell-image';
+import SvgLineDrawing from './VirtualCharaDrawed';
 
 function App() {
   return (
     <div className="App">
+      <CarousellImage />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <SvgLineDrawing />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Portofolio Web On Development
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
