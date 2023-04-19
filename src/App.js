@@ -3,7 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import CarousellImage from './section/home/carousell-image';
 import SvgLineDrawing from './VirtualCharaDrawed';
+import NavbarTop from './component/navbar/Navbar-top';
+import NavbarBottom from './component/navbar/Navbar-bottom';
 import anime from 'animejs';
+import { Container } from '@mui/material';
 
 const AnimeImage = () => {
   const imageRef = useRef(null);
@@ -36,15 +39,21 @@ const AnimeImage = () => {
 
 function App() {
   return (
-    <div className="App">
-      <CarousellImage />
-      <header className="App-header">
-        <AnimeImage/>
-        <p>
-          Portofolio Web On Development
-        </p>
-      </header>
-    </div>
+    <>
+      <NavbarTop />
+      <div className="App">
+        <body className="App-header">
+          <CarousellImage />
+          <AnimeImage />
+          <p>
+            Portofolio Web On Development
+          </p>
+        </body>
+        <footer>
+          <NavbarBottom />
+        </footer>
+      </div>
+    </>
   );
 }
 
