@@ -7,6 +7,7 @@ import NavbarTop from './component/navbar/Navbar-top';
 import NavbarBottom from './component/navbar/Navbar-bottom';
 import anime from 'animejs';
 import { Container } from '@mui/material';
+import { CircularProgress } from "@mui/material";
 
 const AnimeImage = () => {
   const imageRef = useRef(null);
@@ -38,21 +39,41 @@ const AnimeImage = () => {
 }
 
 function App() {
+  const [loading, setLoading] = React.useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <>
       <NavbarTop />
-      <div className="App">
-        <body className="App-header">
-          <CarousellImage />
-          <AnimeImage />
-          <p>
-            Portofolio Web On Development
-          </p>
-        </body>
-        <footer>
-          <NavbarBottom />
-        </footer>
-      </div>
+      {
+        loading ? (
+          <Container
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100vh",
+            }}
+          >
+            <CircularProgress />
+          </Container>
+        ) : (
+          <div className="App">
+            <body className="App-header">
+              {/* <CarousellImage /> */}
+              <AnimeImage />
+              <p>
+                Portofolio Web On Development
+              </p>
+            </body>
+          </div>
+        )
+      }
     </>
   );
 }
