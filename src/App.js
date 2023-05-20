@@ -8,6 +8,7 @@ import NavbarBottom from './component/navbar/Navbar-bottom';
 import anime from 'animejs';
 import { Container } from '@mui/material';
 import { CircularProgress } from "@mui/material";
+import animate from './Modelling';
 
 const AnimeImage = () => {
   const imageRef = useRef(null);
@@ -67,6 +68,7 @@ function App() {
             <body className="App-header">
               {/* <CarousellImage /> */}
               <AnimeImage />
+              <animate />
               <p>
                 Portofolio Web On Development
               </p>
