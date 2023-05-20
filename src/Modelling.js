@@ -7,10 +7,10 @@ const scene = new THREE.Scene();
 scene.add(new THREE.AxesHelper(5))
 
 const light = new THREE.PointLight()
-light.position.set(0.8, 1.4, 1.0)
+light.position.set(0.8, 1.4, 3.0)
 scene.add(light)
 
-const ambientLight = new THREE.AmbientLight()
+const ambientLight = new THREE.HemisphereLight()
 scene.add(ambientLight)
 
 const camera = new THREE.PerspectiveCamera(
@@ -30,20 +30,31 @@ const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
+const geometry2 = new THREE.RingGeometry(1.7, 2, 100);
+const material2 = new THREE.MeshBasicMaterial({ color: 0xffff00, side: THREE.DoubleSide });
+const ringError = new THREE.Mesh(geometry2, material2);
+
 const controls = new OrbitControls(camera, renderer.domElement)
 controls.enableDamping = true
 controls.target.set(0, 1, 0)
 
-const fbxLoader = new FBXLoader()
-fbxLoader.load('../public/3dobject/Gabriel.fbx', (object) => {
-    scene.add(object)
-},
-    (xhr) => {
-        console.log((xhr.loded / xhr.total) * 100 + '% loaded')
+const model = new Promise((res, rej) => {
+    const fbxLoader = new FBXLoader()
+    fbxLoader.load('../src/3d/unitychan.fbx', (object) => {
+        object.scale.set(0.8, 0.8, 0.8)
+        object.position.set(0, 0, 0)
+        scene.add(object)
+        res(object)
     },
-    (error) => {
-        console.log(error)
-    })
+        (xhr) => {
+            console.log((xhr.loded / xhr.total) * 100 + '% loaded')
+        },
+        (error) => {
+            console.log(error)
+            scene.add(ringError)
+            rej(error)
+        })
+})
 
 window.addEventListener('resize', onWindowResize, false)
 function onWindowResize() {
@@ -61,10 +72,16 @@ function render() {
 }
 
 function animate() {
+    model.then((object) => {
+        ringError.visible = false
+        scene.add(object)
+    })
     requestAnimationFrame(animate);
     controls.update()
     render();
     stats.update()
+    cube.rotation.x += 0.05;
+    ringError.rotation.x -= 0.05;
 }
 animate();
 
