@@ -1,10 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import logo from './logo.png';
 import './App.css';
-import NavbarTop from './component/navbar/Navbar-top';
-import NavbarBottom from './component/navbar/Navbar-bottom';
 import anime from 'animejs';
-import { Card, Container, Grid } from '@mui/material';
+import {
+  Card, Container, Grid, Box, Typography
+} from '@mui/material';
 import { CircularProgress } from "@mui/material";
 
 const AnimeImage = () => {
@@ -41,37 +41,17 @@ function App() {
   const [loading, setLoading] = React.useState(true);
   const animeImageRef = useRef(null);
   const welcomeTextRef = useRef(null);
+  const welcomeduaTextRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
-    const animeImage = animeImageRef.current;
-    const welcomeText = welcomeTextRef.current;
-
     // Menggeser Gambar ke Kiri dan Tulisan ke Atas
-    if (animeImage && welcomeText) {
-      anime({
-        targets: animeImage,
-        translateX: -500,
-        duration: 1000,
-        easing: 'easeInOutSine',
-        delay: 10,
-      });
-
-      anime({
-        targets: welcomeText,
-        translateY: -250,
-        duration: 1000,
-        easing: 'easeInOutSine',
-        delay: 10,
-      });
-    }
   }, []);
 
   return (
     <>
-      <NavbarTop />
       {
         loading ? (
           <Container
@@ -86,12 +66,42 @@ function App() {
           </Container>
         ) : (
           <>
-            <div className="App">
-              <body className="App-header">
-                <div ref={animeImageRef} className="anime-image"> <AnimeImage /></div>
-                <h1 ref={welcomeTextRef} className="welcome-text">Selamat Datang</h1>
-              </body>
-            </div>
+            <Box sx={{
+              flexGrow: 1,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "80vh",
+              padding: 2,
+              backgroundColor: "#282c34",
+              color: 'white'
+            }}>
+              <Grid container>
+                <Grid item xs={12} md={4} sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}>
+                  <AnimeImage />
+                </Grid>
+                <Grid item xs={12} md={8}>
+                  <Typography variant="h3" sx={{
+                    marginTop: 2,
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                    className="welcome-text">
+                    <strong>Selamat Datang</strong></Typography>
+                  <div>
+                    <Typography variant="h5">
+                      Website Ini Berisi Mengenai Diri Saya dan Project yang Saya Kerjakan
+                      <span role="img" aria-label="emoji">😊</span>
+                    </Typography>
+                  </div>
+                </Grid>
+              </Grid>
+            </Box>
             <Container sx={{ marginTop: 10 }}>
               <Card sx={{
                 borderRadius: 10,
