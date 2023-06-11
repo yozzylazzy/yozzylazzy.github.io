@@ -3,7 +3,7 @@ import logo from './logo.png';
 import './App.css';
 import anime from 'animejs';
 import {
-  Card, Container, Grid, Box, Typography, Link, ImageList, ImageListItem
+  Card, Container, Grid, Box, Typography, Link
 } from '@mui/material';
 import { CircularProgress } from "@mui/material";
 import { Icon } from '@iconify/react';
