@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback } from 'react';
+import React, { useRef, useEffect } from 'react';
 import logo from './logo.png';
 import './App.css';
 import anime from 'animejs';
@@ -39,9 +39,6 @@ const AnimeImage = () => {
 
 function App() {
   const [loading, setLoading] = React.useState(true);
-  const animeImageRef = useRef(null);
-  const welcomeTextRef = useRef(null);
-  const welcomeduaTextRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -85,16 +82,21 @@ function App() {
                 }}>
                   <AnimeImage />
                 </Grid>
-                <Grid item xs={12} md={8}>
-                  <Typography variant="h3" sx={{
-                    marginTop: 2,
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                    className="welcome-text">
-                    <strong>Selamat Datang</strong></Typography>
+                <Grid item xs={12} md={8} sx={{
+                  display: { md: "flex" },
+                  alignItems: { md: "center" },
+                }}>
                   <div>
-                    <Typography variant="h5">
+                    <Typography variant="h3" sx={{
+                      marginTop: 2,
+                      textAlign: { xs: 'center', md: 'left' },
+                    }}
+                    >
+                      <strong>Selamat Datang</strong></Typography>
+                    <Typography variant="h5" sx={{
+                      textAlign: { xs: 'center', md: 'left' },
+                    }}
+                    >
                       Website Ini Berisi Mengenai Diri Saya dan Project yang Saya Kerjakan
                       <span role="img" aria-label="emoji">😊</span>
                     </Typography>
