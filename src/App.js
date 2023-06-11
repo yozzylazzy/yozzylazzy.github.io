@@ -3,9 +3,10 @@ import logo from './logo.png';
 import './App.css';
 import anime from 'animejs';
 import {
-  Card, Container, Grid, Box, Typography
+  Card, Container, Grid, Box, Typography, Link
 } from '@mui/material';
 import { CircularProgress } from "@mui/material";
+import { Icon } from '@iconify/react';
 
 const AnimeImage = () => {
   const imageRef = useRef(null);
@@ -74,36 +75,107 @@ function App() {
               backgroundColor: "#282c34",
               color: 'white'
             }}>
-              <Grid container>
-                <Grid item xs={12} md={4} sx={{
+              <Grid container spacing={{ md: 10 }}>
+                <Grid item xs={12} md={5} sx={{
                   display: "flex",
-                  justifyContent: "center",
+                  justifyContent: { xs: "center", md: "right" },
                   alignItems: "center",
                 }}>
                   <AnimeImage />
                 </Grid>
-                <Grid item xs={12} md={8} sx={{
+                <Grid item xs={12} md={7} sx={{
                   display: { md: "flex" },
                   alignItems: { md: "center" },
+                  marginTop: { xs: 3, md: 0 }
                 }}>
                   <div>
                     <Typography variant="h3" sx={{
                       marginTop: 2,
                       textAlign: { xs: 'center', md: 'left' },
+                      fontFamily: 'Rajdhani'
                     }}
                     >
-                      <strong>Selamat Datang</strong></Typography>
+                      <strong>Hi! </strong>Nice to see you👋</Typography>
                     <Typography variant="h5" sx={{
                       textAlign: { xs: 'center', md: 'left' },
+                      fontFamily: 'Rajdhani'
                     }}
                     >
-                      Website Ini Berisi Mengenai Diri Saya dan Project yang Saya Kerjakan
+                      I will tell you about myself and my work in this website
                       <span role="img" aria-label="emoji">😊</span>
                     </Typography>
                   </div>
                 </Grid>
               </Grid>
+              <Typography variant="h5" sx={{
+                textAlign: { xs: 'center', md: 'left' },
+                fontFamily: 'Rajdhani',
+                marginTop: { xs: 3, md: 15 }
+              }}
+              >
+                FEEL FREE TO CONTACT ME :
+              </Typography>
             </Box>
+            {/* Buat ROunded Rectangle FLoating */}
+            <Card sx={{
+              borderRadius: 5,
+              boxShadow: 10,
+              display: "flex",
+              float: "center",
+              justifyContent: "center",
+              marginTop: -8,
+              height: { sm: 150, md: 100 },
+              padding: 2,
+              backgroundColor: "white",
+              color: 'black',
+              width: { xs: "80%", sm: '75%', md: '60%', lg: '50%', xl: '40%' },
+              marginLeft: 'auto',
+              marginRight: 'auto'
+            }}>
+              <Grid container spacing={1}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}>
+                <Grid item xs={4} sm={2} md={2}>
+                  <Link href="">
+                    <Icon icon="jam:github"
+                      width='100' color='#4800DE' />
+                  </Link>
+                </Grid>
+                <Grid item xs={4} sm={2} md={2}>
+                  <Link href="">
+                    <Icon icon="jam:yahoo-square"
+                      width='100' color='#4800DE' />
+                  </Link>
+                </Grid>
+                <Grid item xs={4} sm={2} md={2}>
+                  <Link href="">
+                    <Icon icon="jam:instagram"
+                      width='100' color='#4800DE' />
+                  </Link>
+                </Grid>
+                <Grid item xs={4} sm={2} md={2}>
+                  <Link href="">
+                    <Icon icon="jam:twitter"
+                      width='100' color='#4800DE' />
+                  </Link>
+                </Grid>
+                <Grid item xs={4} sm={2} md={2}>
+                  <Link href="">
+                    <Icon icon="jam:linkedin"
+                      width='100' color='#4800DE' />
+                  </Link>
+                </Grid>
+                <Grid item xs={4} sm={2} md={2}>
+                  <Link href="">
+                    <Icon icon="jam:discord"
+                      width='100' color='#4800DE' />
+                  </Link>
+                </Grid>
+              </Grid>
+            </Card>
             <Container sx={{ marginTop: 10 }}>
               <Card sx={{
                 borderRadius: 10,
