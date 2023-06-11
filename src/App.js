@@ -124,11 +124,11 @@ function App() {
               float: "center",
               justifyContent: "center",
               marginTop: -8,
-              height: { sm: 150, md: 100 },
+              height: { xs: 220, sm: 220, md: 100 },
               padding: 2,
               backgroundColor: "white",
               color: 'black',
-              width: { xs: "80%", sm: '75%', md: '60%', lg: '50%', xl: '40%' },
+              width: { xs: "80%", sm: '60%', md: '60%', lg: '50%', xl: '40%' },
               marginLeft: 'auto',
               marginRight: 'auto'
             }}>
@@ -138,38 +138,38 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}>
-                <Grid item xs={4} sm={2} md={2}>
-                  <Link href="">
+                <Grid item xs={4} sm={3} md={2}>
+                  <Link href="https://github.com/yozzylazzy">
                     <Icon icon="jam:github"
                       width='100' color='#4800DE' />
                   </Link>
                 </Grid>
-                <Grid item xs={4} sm={2} md={2}>
-                  <Link href="">
+                <Grid item xs={4} sm={3} md={2}>
+                  <Link href="mailto:kristian_yosef@yahoo.com">
                     <Icon icon="jam:yahoo-square"
                       width='100' color='#4800DE' />
                   </Link>
                 </Grid>
-                <Grid item xs={4} sm={2} md={2}>
-                  <Link href="">
+                <Grid item xs={4} sm={3} md={2}>
+                  <Link href="https://www.instagram.com/yosef_adrian/">
                     <Icon icon="jam:instagram"
                       width='100' color='#4800DE' />
                   </Link>
                 </Grid>
-                <Grid item xs={4} sm={2} md={2}>
-                  <Link href="">
+                <Grid item xs={4} sm={3} md={2}>
+                  <Link href="https://twitter.com/YozzyLazzy">
                     <Icon icon="jam:twitter"
                       width='100' color='#4800DE' />
                   </Link>
                 </Grid>
-                <Grid item xs={4} sm={2} md={2}>
-                  <Link href="">
+                <Grid item xs={4} sm={3} md={2}>
+                  <Link href="https://www.linkedin.com/in/yosef-adrian-aa8344194/">
                     <Icon icon="jam:linkedin"
                       width='100' color='#4800DE' />
                   </Link>
                 </Grid>
                 <Grid item xs={4} sm={2} md={2}>
-                  <Link href="">
+                  <Link href="https://discord.gg/user/Yosef Adrian#1866">
                     <Icon icon="jam:discord"
                       width='100' color='#4800DE' />
                   </Link>
