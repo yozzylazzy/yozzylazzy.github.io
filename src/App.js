@@ -3,7 +3,7 @@ import logo from './logo.png';
 import './App.css';
 import anime from 'animejs';
 import {
-  Card, Container, Grid, Box, Typography, Link
+  Card, Container, Grid, Box, Typography, Link, ImageList, ImageListItem
 } from '@mui/material';
 import { CircularProgress } from "@mui/material";
 import { Icon } from '@iconify/react';
@@ -183,13 +183,11 @@ function App() {
                 width: '100%',
               }}>
                 <img src={require('./test-asset-image/maintheme.gif')} alt="maintheme"
-                  css={{
-                    width: '100%',
-                    maxWidth: '100%',
-                    height: 'auto'
-                  }} />
+                  width="100%" />
                 <AnimeImage key={'top-image'} />
-                <Grid container spacing={3}>
+                <Grid container spacing={3} sx={{
+                  marginTop: 3,
+                }}>
                   <Grid item xs={3} md={2}
                     sx={{
                       display: "flex",
