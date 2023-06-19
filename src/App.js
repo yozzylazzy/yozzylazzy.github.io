@@ -3,10 +3,12 @@ import logo from './logo.png';
 import './App.css';
 import anime from 'animejs';
 import {
-  Card, Container, Grid, Box, Typography, Link
+  Card, Container, Grid, Box, Typography, Link, List, ListItem
 } from '@mui/material';
 import { CircularProgress } from "@mui/material";
 import { Icon } from '@iconify/react';
+
+// ------------------ End of Import ------------------
 
 const AnimeImage = () => {
   const imageRef = useRef(null);
@@ -45,7 +47,6 @@ function App() {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
-    // Menggeser Gambar ke Kiri dan Tulisan ke Atas
   }, []);
 
   return (
@@ -176,7 +177,7 @@ function App() {
                 </Grid>
               </Grid>
             </Card>
-            <Container sx={{ marginTop: 10 }}>
+            <Container sx={{ marginTop: 5, marginBottom: 5 }}>
               <Card sx={{
                 borderRadius: 10,
                 boxShadow: 3,
@@ -184,22 +185,51 @@ function App() {
               }}>
                 <img src={require('./test-asset-image/maintheme.gif')} alt="maintheme"
                   width="100%" />
-                <AnimeImage key={'top-image'} />
-                <Grid container spacing={3} sx={{
+                <Typography variant='h3' sx={{
+                  textAlign: 'center',
+                  fontFamily: 'Rajdhani',
                   marginTop: 3,
+                  marginBottom: 1
                 }}>
-                  <Grid item xs={3} md={2}
+                  Hello, I'm Yosef Adrian
+                </Typography>
+                <Grid container spacing={3} sx={{
+                  marginBottom: 3
+                }}>
+                  <Grid item xs={12} md={3}
                     sx={{
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
                     }}>
-                    <animate />
+                    <List>
+                      <ListItem>
+                        <Icon icon="icon-park:web-page" width='45' color='#4800DE' />
+                        Fullstack Web Developer
+                      </ListItem>
+                      <ListItem>
+                        <Icon icon="icon-park:phone" width='45' color='#4800DE' />
+                        Mobile Developer
+                      </ListItem>
+                      <ListItem>
+                        <Icon icon="fluent:card-ui-20-regular" width='45' color='#4800DE' />
+                        UI/UX Designer
+                      </ListItem>
+                    </List>
                   </Grid>
-                  <Grid item xs={9} md={10}>
-                    <p>
-                      Portofolio Web On Development
-                    </p>
+                  <Grid item xs={12} md={9}>
+                    <Typography variant='h5' sx={{
+                      textAlign: 'justify',
+                      fontFamily: 'Rajdhani',
+                      marginTop: 3,
+                      marginBottom: 1, marginRight: 4
+                    }}>
+                      I'm a <strong>Fullstack Developer</strong> majoring in <strong>Computer Science</strong> and currently working on my Final Project for <strong>Bachelor</strong> degree.
+                      <br />
+                      My speciality is in <strong>web, mobile, and game</strong> development.
+                      <br/>
+                      I also have a strong interest and expertise in <i><strong>Artificial Intelligence, Blockchain, Web 3.0, and UI/UX Design</strong></i>
+                    </Typography>
                   </Grid>
                 </Grid>
               </Card>
