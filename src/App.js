@@ -161,6 +161,19 @@ function App() {
                 </Grid>
               </Grid>
               <Divider />
+
+              {/* Perjalanan Karir dan Pendidikan */}
+              <Typography variant='h3' sx={{
+                textAlign: 'center',
+                fontFamily: 'Rajdhani',
+                marginTop: 3,
+                marginBottom: 2
+              }}>
+                MY TIMEWORK JOURNEY
+              </Typography>
+              <Divider />
+
+              {/* Follow Social Media saya */}
               <Typography variant='h3' sx={{
                 textAlign: 'center',
                 fontFamily: 'Rajdhani',
@@ -199,34 +212,54 @@ function App() {
 
                   </Grid>
                   <Grid item xs={4} sm={3} md={2}>
-                    <Link href="mailto:kristian_yosef@yahoo.com">
-                      <Icon icon="jam:yahoo-square"
-                        width='125' color='#0BDEA0' />
-                    </Link>
+                    <Tooltip title='kristian_yosef@yahoo.com'
+                      placement="bottom"
+                      arrow>
+                      <Link href="mailto:kristian_yosef@yahoo.com">
+                        <Icon icon="jam:yahoo-square"
+                          width='125' color='#0BDEA0' />
+                      </Link>
+                    </Tooltip>
                   </Grid>
                   <Grid item xs={4} sm={3} md={2}>
-                    <Link href="https://www.instagram.com/yosef_adrian/">
-                      <Icon icon="jam:instagram"
-                        width='125' color='#0BDEA0' />
-                    </Link>
+                    <Tooltip title='@yosef_adrian'
+                      placement="bottom"
+                      arrow>
+                      <Link href="https://www.instagram.com/yosef_adrian/">
+                        <Icon icon="jam:instagram"
+                          width='125' color='#0BDEA0' />
+                      </Link>
+                    </Tooltip>
                   </Grid>
                   <Grid item xs={4} sm={3} md={2}>
-                    <Link href="https://twitter.com/YozzyLazzy">
-                      <Icon icon="jam:twitter"
-                        width='125' color='#0BDEA0' />
-                    </Link>
+                    <Tooltip title='@YozzyLazzy'
+                      placement="bottom"
+                      arrow>
+                      <Link href="https://twitter.com/YozzyLazzy">
+                        <Icon icon="jam:twitter"
+                          width='125' color='#0BDEA0' />
+                      </Link>
+                    </Tooltip>
                   </Grid>
                   <Grid item xs={4} sm={3} md={2}>
-                    <Link href="https://www.linkedin.com/in/yosef-adrian-aa8344194/">
-                      <Icon icon="jam:linkedin"
-                        width='125' color='#0BDEA0' />
-                    </Link>
+                    <Tooltip title='Yosef Adrian'
+                      placement="bottom"
+                      arrow>
+                      <Link href="https://www.linkedin.com/in/yosef-adrian-aa8344194/">
+                        <Icon icon="jam:linkedin"
+                          width='125' color='#0BDEA0' />
+                      </Link>
+                    </Tooltip>
                   </Grid>
                   <Grid item xs={4} sm={2} md={2}>
-                    <Link href="https://discord.gg/user/Yosef Adrian#1866">
-                      <Icon icon="jam:discord"
-                        width='125' color='#0BDEA0' />
-                    </Link>
+                    <Tooltip title='#yosefadrian'
+                      placement="bottom"
+                      arrow>
+                      <Link href="https://discord.gg/user/Yosef Adrian#1866">
+                        <Icon icon="jam:discord"
+                          width='125' color='#0BDEA0' />
+                      </Link>
+                    </Tooltip>
                   </Grid>
                 </Grid>
               </Card>
