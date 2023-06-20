@@ -3,7 +3,7 @@ import logo from './logo.png';
 import './App.css';
 import anime from 'animejs';
 import {
-  Card, Container, Grid, Box, Typography, Link, List, ListItem
+  Card, Container, Grid, Box, Typography, Link, List, ListItem, Tooltip, Divider
 } from '@mui/material';
 import { CircularProgress } from "@mui/material";
 import { Icon } from '@iconify/react';
@@ -108,128 +108,125 @@ function App() {
                   </div>
                 </Grid>
               </Grid>
-              <Typography variant="h5" sx={{
-                textAlign: { xs: 'center', md: 'left' },
-                fontFamily: 'Rajdhani',
-                marginTop: { xs: 3, md: 15 }
-              }}
-              >
-                FEEL FREE TO CONTACT ME :
-              </Typography>
             </Box>
-            {/* Buat ROunded Rectangle FLoating */}
-            <Card sx={{
-              borderRadius: 5,
-              boxShadow: 10,
-              display: "flex",
-              float: "center",
-              justifyContent: "center",
-              marginTop: -8,
-              height: { xs: 220, sm: 220, md: 100 },
-              padding: 2,
-              backgroundColor: "white",
-              color: 'black',
-              width: { xs: "80%", sm: '60%', md: '60%', lg: '50%', xl: '40%' },
-              marginLeft: 'auto',
-              marginRight: 'auto'
-            }}>
-              <Grid container spacing={1}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}>
-                <Grid item xs={4} sm={3} md={2}>
-                  <Link href="https://github.com/yozzylazzy">
-                    <Icon icon="jam:github"
-                      width='100' color='#4800DE' />
-                  </Link>
+            <Container sx={{ marginTop: 5, marginBottom: 5 }}>
+              <Typography variant='h3' sx={{
+                textAlign: 'center',
+                fontFamily: 'Rajdhani',
+                marginTop: 4,
+                marginBottom: 1
+              }}>
+                HELLO, I'M YOSEF ADRIAN
+              </Typography>
+              <Grid container spacing={3} sx={{
+                marginBottom: 3
+              }}>
+                <Grid item xs={12} md={3}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}>
+                  <Icon icon="material-symbols:developer-mode-tv-outline-sharp" width='210' color='#0BDEA0' />
                 </Grid>
-                <Grid item xs={4} sm={3} md={2}>
-                  <Link href="mailto:kristian_yosef@yahoo.com">
-                    <Icon icon="jam:yahoo-square"
-                      width='100' color='#4800DE' />
-                  </Link>
-                </Grid>
-                <Grid item xs={4} sm={3} md={2}>
-                  <Link href="https://www.instagram.com/yosef_adrian/">
-                    <Icon icon="jam:instagram"
-                      width='100' color='#4800DE' />
-                  </Link>
-                </Grid>
-                <Grid item xs={4} sm={3} md={2}>
-                  <Link href="https://twitter.com/YozzyLazzy">
-                    <Icon icon="jam:twitter"
-                      width='100' color='#4800DE' />
-                  </Link>
-                </Grid>
-                <Grid item xs={4} sm={3} md={2}>
-                  <Link href="https://www.linkedin.com/in/yosef-adrian-aa8344194/">
-                    <Icon icon="jam:linkedin"
-                      width='100' color='#4800DE' />
-                  </Link>
-                </Grid>
-                <Grid item xs={4} sm={2} md={2}>
-                  <Link href="https://discord.gg/user/Yosef Adrian#1866">
-                    <Icon icon="jam:discord"
-                      width='100' color='#4800DE' />
-                  </Link>
+                <Grid item xs={12} md={9} >
+                  <List sx={{
+                    marginBottom: 1, marginRight: 4
+                  }}>
+                    <ListItem>
+                      <Typography variant='h5' sx={{
+                        textAlign: 'justify',
+                        fontFamily: 'Rajdhani',
+                      }}>
+                        I'm a <strong>Fullstack Developer</strong> majoring in <strong>Computer Science</strong> and currently working on my Final Project for <strong>Bachelor</strong> degree.
+                      </Typography>
+                    </ListItem>
+                    <ListItem>
+                      <Typography variant='h5' sx={{
+                        textAlign: 'justify',
+                        fontFamily: 'Rajdhani',
+                      }}>
+                        My speciality is in <strong>web, mobile, and game</strong> development.
+                      </Typography>
+                    </ListItem>
+                    <ListItem>
+                      <Typography variant='h5' sx={{
+                        textAlign: 'justify',
+                        fontFamily: 'Rajdhani',
+                      }}>
+                        I also have a strong interest and expertise in <i><strong>Artificial Intelligence, Blockchain, Web 3.0, and UI/UX Design</strong></i>
+                      </Typography>
+                    </ListItem>
+                  </List>
                 </Grid>
               </Grid>
-            </Card>
-            <Container sx={{ marginTop: 5, marginBottom: 5 }}>
-              <Card sx={{
-                borderRadius: 10,
-                boxShadow: 3,
-                width: '100%',
+              <Divider />
+              <Typography variant='h3' sx={{
+                textAlign: 'center',
+                fontFamily: 'Rajdhani',
+                marginTop: 3,
+                marginBottom: 2
               }}>
-                <img src={require('./test-asset-image/maintheme.gif')} alt="maintheme"
-                  width="100%" />
-                <Typography variant='h3' sx={{
-                  textAlign: 'center',
-                  fontFamily: 'Rajdhani',
-                  marginTop: 3,
-                  marginBottom: 1
-                }}>
-                  Hello, I'm Yosef Adrian
-                </Typography>
-                <Grid container spacing={3} sx={{
-                  marginBottom: 3
-                }}>
-                  <Grid item xs={12} md={3}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}>
-                    <List>
-                      <ListItem>
-                        <Icon icon="icon-park:web-page" width='45' color='#4800DE' />
-                        Fullstack Web Developer
-                      </ListItem>
-                      <ListItem>
-                        <Icon icon="icon-park:phone" width='45' color='#4800DE' />
-                        Mobile Developer
-                      </ListItem>
-                      <ListItem>
-                        <Icon icon="fluent:card-ui-20-regular" width='45' color='#4800DE' />
-                        UI/UX Designer
-                      </ListItem>
-                    </List>
+                FELL FREE TO CONTACT ME
+              </Typography>
+              <Card sx={{
+                borderRadius: 0,
+                boxShadow: 10,
+                display: "flex",
+                float: "center",
+                justifyContent: "center",
+                padding: 10,
+                backgroundColor: "#4800DE",
+                color: 'black',
+                marginLeft: 'auto',
+                marginRight: 'auto'
+              }}>
+                <Grid container spacing={3}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}>
+                  <Grid item xs={4} sm={3} md={2}>
+                    <Tooltip title='Github Yozzy Lazzy'
+                      placement="bottom"
+                      arrow>
+                      <Link href="https://github.com/yozzylazzy">
+                        <Icon icon="jam:github"
+                          width='125' color='#0BDEA0' />
+                      </Link>
+                    </Tooltip>
+
                   </Grid>
-                  <Grid item xs={12} md={9}>
-                    <Typography variant='h5' sx={{
-                      textAlign: 'justify',
-                      fontFamily: 'Rajdhani',
-                      marginTop: 3,
-                      marginBottom: 1, marginRight: 4
-                    }}>
-                      I'm a <strong>Fullstack Developer</strong> majoring in <strong>Computer Science</strong> and currently working on my Final Project for <strong>Bachelor</strong> degree.
-                      <br />
-                      My speciality is in <strong>web, mobile, and game</strong> development.
-                      <br/>
-                      I also have a strong interest and expertise in <i><strong>Artificial Intelligence, Blockchain, Web 3.0, and UI/UX Design</strong></i>
-                    </Typography>
+                  <Grid item xs={4} sm={3} md={2}>
+                    <Link href="mailto:kristian_yosef@yahoo.com">
+                      <Icon icon="jam:yahoo-square"
+                        width='125' color='#0BDEA0' />
+                    </Link>
+                  </Grid>
+                  <Grid item xs={4} sm={3} md={2}>
+                    <Link href="https://www.instagram.com/yosef_adrian/">
+                      <Icon icon="jam:instagram"
+                        width='125' color='#0BDEA0' />
+                    </Link>
+                  </Grid>
+                  <Grid item xs={4} sm={3} md={2}>
+                    <Link href="https://twitter.com/YozzyLazzy">
+                      <Icon icon="jam:twitter"
+                        width='125' color='#0BDEA0' />
+                    </Link>
+                  </Grid>
+                  <Grid item xs={4} sm={3} md={2}>
+                    <Link href="https://www.linkedin.com/in/yosef-adrian-aa8344194/">
+                      <Icon icon="jam:linkedin"
+                        width='125' color='#0BDEA0' />
+                    </Link>
+                  </Grid>
+                  <Grid item xs={4} sm={2} md={2}>
+                    <Link href="https://discord.gg/user/Yosef Adrian#1866">
+                      <Icon icon="jam:discord"
+                        width='125' color='#0BDEA0' />
+                    </Link>
                   </Grid>
                 </Grid>
               </Card>
