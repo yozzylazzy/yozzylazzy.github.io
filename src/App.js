@@ -325,6 +325,18 @@ function App() {
                 </Grid>
               </Grid>
               <Divider />
+
+              {/* Proyek dan Kerjaan */}
+              <Typography variant='h3' sx={{
+                textAlign: 'center',
+                fontFamily: 'Rajdhani',
+                marginTop: 3,
+                marginBottom: 2
+              }}>
+                MY PROJECT AND WORK
+              </Typography>
+              <Divider />
+
               {/* Follow Social Media saya */}
               <Typography variant='h3' sx={{
                 textAlign: 'center',
@@ -358,7 +370,12 @@ function App() {
                       arrow>
                       <Link href="https://github.com/yozzylazzy">
                         <Icon icon="jam:github"
-                          width='125' color='#0BDEA0' />
+                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                            target.style.scale = 1.1
+                            target.style.transition = 'all 0.4s ease'
+                          }}
+                          onMouseLeave={({ target }) =>
+                            target.style.scale = 1.0} />
                       </Link>
                     </Tooltip>
 
@@ -369,7 +386,12 @@ function App() {
                       arrow>
                       <Link href="mailto:kristian_yosef@yahoo.com">
                         <Icon icon="jam:yahoo-square"
-                          width='125' color='#0BDEA0' />
+                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                            target.style.scale = 1.1
+                            target.style.transition = 'all 0.4s ease'
+                          }}
+                          onMouseLeave={({ target }) =>
+                            target.style.scale = 1.0} />
                       </Link>
                     </Tooltip>
                   </Grid>
@@ -379,7 +401,12 @@ function App() {
                       arrow>
                       <Link href="https://www.instagram.com/yosef_adrian/">
                         <Icon icon="jam:instagram"
-                          width='125' color='#0BDEA0' />
+                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                            target.style.scale = 1.1
+                            target.style.transition = 'all 0.4s ease'
+                          }}
+                          onMouseLeave={({ target }) =>
+                            target.style.scale = 1.0} />
                       </Link>
                     </Tooltip>
                   </Grid>
@@ -389,7 +416,12 @@ function App() {
                       arrow>
                       <Link href="https://twitter.com/YozzyLazzy">
                         <Icon icon="jam:twitter"
-                          width='125' color='#0BDEA0' />
+                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                            target.style.scale = 1.1
+                            target.style.transition = 'all 0.4s ease'
+                          }}
+                          onMouseLeave={({ target }) =>
+                            target.style.scale = 1.0} />
                       </Link>
                     </Tooltip>
                   </Grid>
@@ -399,7 +431,12 @@ function App() {
                       arrow>
                       <Link href="https://www.linkedin.com/in/yosef-adrian-aa8344194/">
                         <Icon icon="jam:linkedin"
-                          width='125' color='#0BDEA0' />
+                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                            target.style.scale = 1.1
+                            target.style.transition = 'all 0.4s ease'
+                          }}
+                          onMouseLeave={({ target }) =>
+                            target.style.scale = 1.0} />
                       </Link>
                     </Tooltip>
                   </Grid>
@@ -409,7 +446,12 @@ function App() {
                       arrow>
                       <Link href="https://discord.gg/user/Yosef Adrian#1866">
                         <Icon icon="jam:discord"
-                          width='125' color='#0BDEA0' />
+                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                            target.style.scale = 1.1
+                            target.style.transition = 'all 0.4s ease'
+                          }}
+                          onMouseLeave={({ target }) =>
+                            target.style.scale = 1.0} />
                       </Link>
                     </Tooltip>
                   </Grid>
