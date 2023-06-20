@@ -14,6 +14,7 @@ import {
 import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import CarousellImage from './section/home/carousell-image'
 
 // ------------------ End of Import ------------------
 
@@ -335,7 +336,8 @@ function App() {
               }}>
                 MY PROJECT AND WORK
               </Typography>
-              <Divider />
+              <CarousellImage />
+              <Divider sx={{ marginTop: 5 }} />
 
               {/* Follow Social Media saya */}
               <Typography variant='h3' sx={{
