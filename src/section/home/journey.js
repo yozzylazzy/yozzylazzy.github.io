@@ -150,7 +150,7 @@ export default function Journey() {
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Typography variant="body1">
-                                    STMIK LIKMI - Junior Fullstack Dev (2023-2026)
+                                    Certification Foundation - Certificate Name (2022)
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -161,7 +161,7 @@ export default function Journey() {
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Typography variant="body1">
-                                    Freelance - Website Fundamental Teacher (2022)
+                                    Certification Foundation - Certificate Name (2023)
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>

@@ -12,6 +12,7 @@ import CarousellImage from './section/home/carousell-image'
 // section
 import Introduction from './section/home/introduction'
 import Journey from './section/home/journey'
+import ProjectSection from './section/home/project'
 
 // ------------------ End of Import ------------------
 
@@ -131,6 +132,7 @@ function App() {
                 MY PROJECT AND WORK
               </Typography>
               <CarousellImage />
+              <ProjectSection />
               <Divider sx={{ marginTop: 5 }} />
 
               {/* Follow Social Media saya */}
