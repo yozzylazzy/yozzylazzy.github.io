@@ -91,31 +91,43 @@ function App() {
                       justifyContent: { xs: "center", md: "right" },
                       alignItems: "center",
                     }}>
-                      <AnimeImage />
+                      <Parallax
+                        translateX={['0px', '-480px']}
+                        scale={[0.75, 1]}
+                        rotate={[-180, 0]}
+                        easing="easeInExpo">
+                        <AnimeImage />
+                      </Parallax>
                     </Grid>
-                    <Grid item xs={12} md={7} sx={{
-                      display: { md: "flex" },
-                      alignItems: { md: "center" },
-                      marginTop: { xs: 3, md: 0 }
-                    }}>
-                      <div>
-                        <Typography variant="h3" sx={{
-                          marginTop: 2,
-                          textAlign: { xs: 'center', md: 'left' },
-                          fontFamily: 'Rajdhani'
-                        }}
-                        >
-                          <strong>Hi! </strong>Nice to see you👋</Typography>
-                        <Typography variant="h5" sx={{
-                          textAlign: { xs: 'center', md: 'left' },
-                          fontFamily: 'Rajdhani'
-                        }}
-                        >
-                          I will tell you about myself and my work in this website
-                          <span role="img" aria-label="emoji">😊</span>
-                        </Typography>
-                      </div>
-                    </Grid>
+                    <Parallax
+                      translateX={['0px', '-480px']}
+                        scale={[1, 0.2]}
+                        rotate={[0, -180]}
+                        easing="easeInExpo">
+                      <Grid item xs={12} md={7} sx={{
+                        display: { md: "flex" },
+                        alignItems: { md: "center" },
+                        marginTop: { xs: 3, md: 0 }
+                      }}>
+                        <div>
+                          <Typography variant="h3" sx={{
+                            marginTop: 2,
+                            textAlign: { xs: 'center', md: 'left' },
+                            fontFamily: 'Rajdhani'
+                          }}
+                          >
+                            <strong>Hi! </strong>Nice to see you👋</Typography>
+                          <Typography variant="h5" sx={{
+                            textAlign: { xs: 'center', md: 'left' },
+                            fontFamily: 'Rajdhani'
+                          }}
+                          >
+                            I will tell you about myself and my work in this website
+                            <span role="img" aria-label="emoji">😊</span>
+                          </Typography>
+                        </div>
+                      </Grid>
+                    </Parallax>
                   </Grid>
                 </Box>
               </Parallax>
