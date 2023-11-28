@@ -6,25 +6,25 @@ import {
 
 const dataProject = [
     {
-        title: 'Project 1',
+        title: 'Garuda Laptop Website',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
         link_image: "",
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
-        title: 'Project 2',
+        title: 'Digital Library App',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
         link_image: "",
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
-        title: 'Project 3',
+        title: 'Happy New Year 2022 2D Game',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
         link_image: "",
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
-        title: 'Project 4',
+        title: 'Lunatics (Ongoing Project)',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
         link_image: "",
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
@@ -42,13 +42,12 @@ export default function ProjectSection() {
                     return (
                         <Grid item xs={12} md={4}>
                             <Card sx={{
-                                color: 'black',
-                                borderRadius: 3,
-                                boxShadow: 5,
+                                borderRadius: 2,
+                                boxShadow: 3,
                                 display: "flex",
                                 float: "center",
                                 justifyContent: "center",
-                                padding: 10,
+                                padding: 4,
                                 marginLeft: 'auto',
                                 marginRight: 'auto'
                             }}>

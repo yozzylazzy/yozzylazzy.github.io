@@ -13,6 +13,7 @@ import CarousellImage from './section/home/carousell-image'
 import Introduction from './section/home/introduction'
 import Journey from './section/home/journey'
 import ProjectSection from './section/home/project'
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 
 // ------------------ End of Import ------------------
 
@@ -71,50 +72,54 @@ function App() {
           </Container>
         ) : (
           <>
-            <Box sx={{
-              flexGrow: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "80vh",
-              padding: 2,
-              backgroundColor: "#282c34",
-              color: 'white'
-            }}>
-              <Grid container spacing={{ md: 10 }}>
-                <Grid item xs={12} md={5} sx={{
+            <ParallaxProvider>
+              <Parallax speed={10}>
+                <Box sx={{
+                  flexGrow: 1,
                   display: "flex",
-                  justifyContent: { xs: "center", md: "right" },
+                  flexDirection: "column",
                   alignItems: "center",
+                  justifyContent: "center",
+                  height: "80vh",
+                  padding: 2,
+                  backgroundColor: "#282c34",
+                  color: 'white'
                 }}>
-                  <AnimeImage />
-                </Grid>
-                <Grid item xs={12} md={7} sx={{
-                  display: { md: "flex" },
-                  alignItems: { md: "center" },
-                  marginTop: { xs: 3, md: 0 }
-                }}>
-                  <div>
-                    <Typography variant="h3" sx={{
-                      marginTop: 2,
-                      textAlign: { xs: 'center', md: 'left' },
-                      fontFamily: 'Rajdhani'
-                    }}
-                    >
-                      <strong>Hi! </strong>Nice to see you👋</Typography>
-                    <Typography variant="h5" sx={{
-                      textAlign: { xs: 'center', md: 'left' },
-                      fontFamily: 'Rajdhani'
-                    }}
-                    >
-                      I will tell you about myself and my work in this website
-                      <span role="img" aria-label="emoji">😊</span>
-                    </Typography>
-                  </div>
-                </Grid>
-              </Grid>
-            </Box>
+                  <Grid container spacing={{ md: 10 }}>
+                    <Grid item xs={12} md={5} sx={{
+                      display: "flex",
+                      justifyContent: { xs: "center", md: "right" },
+                      alignItems: "center",
+                    }}>
+                      <AnimeImage />
+                    </Grid>
+                    <Grid item xs={12} md={7} sx={{
+                      display: { md: "flex" },
+                      alignItems: { md: "center" },
+                      marginTop: { xs: 3, md: 0 }
+                    }}>
+                      <div>
+                        <Typography variant="h3" sx={{
+                          marginTop: 2,
+                          textAlign: { xs: 'center', md: 'left' },
+                          fontFamily: 'Rajdhani'
+                        }}
+                        >
+                          <strong>Hi! </strong>Nice to see you👋</Typography>
+                        <Typography variant="h5" sx={{
+                          textAlign: { xs: 'center', md: 'left' },
+                          fontFamily: 'Rajdhani'
+                        }}
+                        >
+                          I will tell you about myself and my work in this website
+                          <span role="img" aria-label="emoji">😊</span>
+                        </Typography>
+                      </div>
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Parallax>
+            </ParallaxProvider>
             <Container sx={{ marginTop: 5, marginBottom: 5 }}>
               <Introduction />
               <Divider />
