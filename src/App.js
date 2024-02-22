@@ -1,5 +1,6 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import logo from './logo.png'
+import cityLight from './assets/images/page/city-light.jpeg';
 import './App.css'
 import anime from 'animejs'
 import {
@@ -9,6 +10,7 @@ import { CircularProgress } from "@mui/material"
 import { Icon } from '@iconify/react'
 
 // section
+import Introduction from './section/home/introduction';
 import Journey from './section/home/journey'
 import ProjectSection from './section/home/project'
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
@@ -47,14 +49,29 @@ const AnimeImage = () => {
 
 function App() {
   const [loading, setLoading] = React.useState(true);
-  // const windowHeight = useRef(window.innerHeight);
-  // const windowWidth = useRef(window.innerWidth)
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+      setWindowWidth(window.innerWidth);
+    }
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    }
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
+
 
   return (
     <>
@@ -80,90 +97,76 @@ function App() {
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
-                  height: "80vh",
+                  height: windowHeight < windowWidth ? "90vh" : "90vh",
                   padding: 2,
-                  backgroundColor: "#282c34",
-                  color: 'white'
+                  backgroundImage: `url(${cityLight})`,
+                  backgroundSize: 'cover',
+                  backgroundPositionY: windowHeight < windowWidth ? `${(-90) + (scrollPosition / 5)}vh` : `${scrollPosition / 10}vh`,
+                  backgroundPositionX: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  color: 'white',
                 }}>
-                  <Stack>
-                    {/* <img src={topbg} className="top-background" alt="logo" height={}/> */}
-                    <Grid container spacing={3} sx={{
-                      marginBottom: 3
-                    }}>
-                      <Grid item xs={12} md={4}
-                        sx={{
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
-                        }}>
-                        <AnimeImage />
-                      </Grid>
-                      <Grid item xs={12} md={8}
-                        sx={{
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
-                        }} >
-                        <Stack>
-                          <Typography variant='h3' sx={{
-                            marginTop: 2,
-                            marginBottom: 2,
-                            textAlign: { xs: 'center', md: 'left' },
-                            fontFamily: 'Rajdhani'
-                          }}>
-                            <strong>HELLO!</strong> I'M YOSEF ADRIAN👋
-                          </Typography>
-                          <Typography variant="h5" sx={{
-                            textAlign: { xs: 'center', md: 'left' },
-                            fontFamily: 'Rajdhani'
-                          }}>
-                            I'm a <strong>Fullstack Developer</strong> majoring in <strong>Computer Science</strong> and currently working on my Final Project for <strong>Bachelor</strong> degree.
-                            <br></br>
-                            <br></br>
-                            My speciality is in <strong>web, mobile, and game</strong> development.
-                          </Typography>
-                        </Stack>
-                      </Grid>
-                    </Grid>
-                  </Stack>
+                  <div
+                    style={{
+                      position: 'absolute',
+                      width: '100%',
+                      height: '100%',
+                      background: 'linear-gradient(to top, rgba(24,7,51, 0.9), rgba(65,54,81, 0.1))',
+                    }}
+                  ></div>
+                  <Typography variant='h3' sx={{
+                    marginTop: 2,
+                    marginBottom: 2,
+                    zIndex: 3,
+                    textAlign: { xs: 'center', md: 'left' },
+                    fontFamily: 'Rajdhani'
+                  }}>
+                    <strong>HELLO!</strong> I'M YOSEF ADRIAN👋
+                  </Typography>
+                  <Typography variant="h5" sx={{
+                    textAlign: { xs: 'center', md: 'center' },
+                    fontFamily: 'Rajdhani',
+                    zIndex: 3,
+                  }}>
+                    I'm a <strong>Fullstack Developer</strong> majoring in <strong>Computer Science</strong> and currently working on my Final Project for <strong>Bachelor</strong> degree.
+                    <br></br>
+                    <br></br>
+                    My speciality is in <strong>web, mobile, and game</strong> development.
+                  </Typography>
                 </Box>
               </Parallax>
             </ParallaxProvider>
             <Container sx={{ marginTop: 5, marginBottom: 5 }}>
-              {/* Perjalanan Karir dan Pendidikan */}
+              <Introduction />
+              <Divider
+                sx={{
+                  marginTop: 5,
+                  marginBottom: 5,
+                }} />
               <Journey />
-              <Divider />
-
-              {/* Proyek dan Kerjaan */}
-              <Typography variant='h3' sx={{
+              <Divider
+                sx={{
+                  marginTop: 5,
+                  marginBottom: 5,
+                }}
+              />
+              <Typography variant='h4' sx={{
                 textAlign: 'center',
                 fontFamily: 'Rajdhani',
-                marginTop: 3,
-                marginBottom: 2
+                fontWeight: 'bold',
               }}>
-                MY PROJECT AND WORK
+                PROJECT AND WORK
               </Typography>
               <ProjectSection />
-              <Divider sx={{ marginTop: 5 }} />
-
-              {/* Follow Social Media saya */}
-              <Typography variant='h3' sx={{
-                textAlign: 'center',
-                fontFamily: 'Rajdhani',
-                marginTop: 3,
-                marginBottom: 2
-              }}>
-                FELL FREE TO CONTACT ME
-              </Typography>
+              <Divider sx={{
+                marginTop: 5,
+                marginBottom: 5,
+              }} />
               <Card sx={{
-                borderRadius: 0,
-                boxShadow: 10,
                 display: "flex",
                 float: "center",
                 justifyContent: "center",
                 padding: 10,
-                // backgroundColor: "#4800DE",
-                backgroundColor: "black",
                 color: 'black',
                 marginLeft: 'auto',
                 marginRight: 'auto'
@@ -182,7 +185,7 @@ function App() {
                         <Icon icon="jam:github"
                           width='100'
                           //  color='#0BDEA0'
-                          color='white'
+                          color='black'
                           onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
@@ -199,7 +202,7 @@ function App() {
                       arrow>
                       <Link href="mailto:kristian_yosef@yahoo.com">
                         <Icon icon="jam:yahoo-square"
-                          width='100' color='white'
+                          width='100' color='black'
                           onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
@@ -215,7 +218,7 @@ function App() {
                       arrow>
                       <Link href="https://www.instagram.com/yosef_adrian/">
                         <Icon icon="jam:instagram"
-                          width='100' color='white'
+                          width='100' color='black'
                           onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
@@ -231,7 +234,7 @@ function App() {
                       arrow>
                       <Link href="https://twitter.com/YozzyLazzy">
                         <Icon icon="jam:twitter"
-                          width='100' color='white'
+                          width='100' color='black'
                           onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
@@ -247,7 +250,7 @@ function App() {
                       arrow>
                       <Link href="https://www.linkedin.com/in/yosef-adrian-aa8344194/">
                         <Icon icon="jam:linkedin"
-                          width='100' color='white'
+                          width='100' color='black'
                           onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
@@ -263,7 +266,7 @@ function App() {
                       arrow>
                       <Link href="https://discord.gg/user/Yosef Adrian#1866">
                         <Icon icon="jam:discord"
-                          width='100' color='white'
+                          width='100' color='black'
                           onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'

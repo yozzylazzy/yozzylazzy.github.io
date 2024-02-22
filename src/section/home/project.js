@@ -50,7 +50,8 @@ export default function ProjectSection() {
                             }}>
                                 <Typography variant='h5' sx={{
                                     fontFamily: 'Rajdhani',
-                                    marginBottom: 2
+                                    marginBottom: 2,
+                                    fontWeight: 'bold',
                                 }}>
                                     {data.title}
                                 </Typography>
