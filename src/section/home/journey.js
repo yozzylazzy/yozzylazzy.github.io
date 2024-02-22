@@ -63,28 +63,6 @@ export default function Journey() {
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
-                        <TimelineItem>
-                            <TimelineSeparator>
-                                <TimelineDot color="primary" />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent>
-                                <Typography variant="body1">
-                                    SMP Waringin - Sekolah Menengah Pertama (2014-2017)
-                                </Typography>
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem>
-                            <TimelineSeparator>
-                                <TimelineDot color="primary" />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent>
-                                <Typography variant="body1">
-                                    SD Dwisakti - Sekolah Dasar (2008-2014)
-                                </Typography>
-                            </TimelineContent>
-                        </TimelineItem>
                     </Timeline>
                 </Grid>
                 <Grid item xs={12} md={4} >

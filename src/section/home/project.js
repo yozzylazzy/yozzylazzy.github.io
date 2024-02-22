@@ -8,7 +8,7 @@ const dataProject = [
     {
         title: 'Garuda Laptop Website',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "",
+        link_image: "yozzylazzy.github.com",
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
@@ -44,9 +44,6 @@ export default function ProjectSection() {
                             <Card sx={{
                                 borderRadius: 2,
                                 boxShadow: 3,
-                                display: "flex",
-                                float: "center",
-                                justifyContent: "center",
                                 padding: 4,
                                 marginLeft: 'auto',
                                 marginRight: 'auto'
@@ -58,7 +55,6 @@ export default function ProjectSection() {
                                     {data.title}
                                 </Typography>
                                 <Typography variant='body1' sx={{
-                                    marginBottom: 2
                                 }}>
                                     {data.description}
                                 </Typography>

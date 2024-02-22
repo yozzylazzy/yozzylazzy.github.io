@@ -3,14 +3,12 @@ import logo from './logo.png'
 import './App.css'
 import anime from 'animejs'
 import {
-  Card, Container, Grid, Box, Typography, Link, Tooltip, Divider
+  Card, Container, Grid, Box, Typography, Link, Tooltip, Divider, Stack,
 } from '@mui/material'
 import { CircularProgress } from "@mui/material"
 import { Icon } from '@iconify/react'
 
-import CarousellImage from './section/home/carousell-image'
 // section
-import Introduction from './section/home/introduction'
 import Journey from './section/home/journey'
 import ProjectSection from './section/home/project'
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
@@ -49,6 +47,8 @@ const AnimeImage = () => {
 
 function App() {
   const [loading, setLoading] = React.useState(true);
+  // const windowHeight = useRef(window.innerHeight);
+  // const windowWidth = useRef(window.innerWidth)
 
   useEffect(() => {
     setTimeout(() => {
@@ -85,56 +85,51 @@ function App() {
                   backgroundColor: "#282c34",
                   color: 'white'
                 }}>
-                  <Grid container spacing={{ md: 10 }}>
-                    <Grid item xs={12} md={5} sx={{
-                      display: "flex",
-                      justifyContent: { xs: "center", md: "right" },
-                      alignItems: "center",
+                  <Stack>
+                    {/* <img src={topbg} className="top-background" alt="logo" height={}/> */}
+                    <Grid container spacing={3} sx={{
+                      marginBottom: 3
                     }}>
-                      <Parallax
-                        translateX={['0px', '-480px']}
-                        scale={[0.75, 1]}
-                        rotate={[-180, 0]}
-                        easing="easeInExpo">
+                      <Grid item xs={12} md={4}
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}>
                         <AnimeImage />
-                      </Parallax>
-                    </Grid>
-                    <Parallax
-                      translateX={['0px', '-480px']}
-                        scale={[1, 0.2]}
-                        rotate={[0, -180]}
-                        easing="easeInExpo">
-                      <Grid item xs={12} md={7} sx={{
-                        display: { md: "flex" },
-                        alignItems: { md: "center" },
-                        marginTop: { xs: 3, md: 0 }
-                      }}>
-                        <div>
-                          <Typography variant="h3" sx={{
+                      </Grid>
+                      <Grid item xs={12} md={8}
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }} >
+                        <Stack>
+                          <Typography variant='h3' sx={{
                             marginTop: 2,
+                            marginBottom: 2,
                             textAlign: { xs: 'center', md: 'left' },
                             fontFamily: 'Rajdhani'
-                          }}
-                          >
-                            <strong>Hi! </strong>Nice to see you👋</Typography>
+                          }}>
+                            <strong>HELLO!</strong> I'M YOSEF ADRIAN👋
+                          </Typography>
                           <Typography variant="h5" sx={{
                             textAlign: { xs: 'center', md: 'left' },
                             fontFamily: 'Rajdhani'
-                          }}
-                          >
-                            I will tell you about myself and my work in this website
-                            <span role="img" aria-label="emoji">😊</span>
+                          }}>
+                            I'm a <strong>Fullstack Developer</strong> majoring in <strong>Computer Science</strong> and currently working on my Final Project for <strong>Bachelor</strong> degree.
+                            <br></br>
+                            <br></br>
+                            My speciality is in <strong>web, mobile, and game</strong> development.
                           </Typography>
-                        </div>
+                        </Stack>
                       </Grid>
-                    </Parallax>
-                  </Grid>
+                    </Grid>
+                  </Stack>
                 </Box>
               </Parallax>
             </ParallaxProvider>
             <Container sx={{ marginTop: 5, marginBottom: 5 }}>
-              <Introduction />
-              <Divider />
               {/* Perjalanan Karir dan Pendidikan */}
               <Journey />
               <Divider />
@@ -148,7 +143,6 @@ function App() {
               }}>
                 MY PROJECT AND WORK
               </Typography>
-              <CarousellImage />
               <ProjectSection />
               <Divider sx={{ marginTop: 5 }} />
 
@@ -168,7 +162,8 @@ function App() {
                 float: "center",
                 justifyContent: "center",
                 padding: 10,
-                backgroundColor: "#4800DE",
+                // backgroundColor: "#4800DE",
+                backgroundColor: "black",
                 color: 'black',
                 marginLeft: 'auto',
                 marginRight: 'auto'
@@ -185,7 +180,10 @@ function App() {
                       arrow>
                       <Link href="https://github.com/yozzylazzy">
                         <Icon icon="jam:github"
-                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                          width='100'
+                          //  color='#0BDEA0'
+                          color='white'
+                          onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
                           }}
@@ -201,7 +199,8 @@ function App() {
                       arrow>
                       <Link href="mailto:kristian_yosef@yahoo.com">
                         <Icon icon="jam:yahoo-square"
-                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                          width='100' color='white'
+                          onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
                           }}
@@ -216,7 +215,8 @@ function App() {
                       arrow>
                       <Link href="https://www.instagram.com/yosef_adrian/">
                         <Icon icon="jam:instagram"
-                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                          width='100' color='white'
+                          onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
                           }}
@@ -231,7 +231,8 @@ function App() {
                       arrow>
                       <Link href="https://twitter.com/YozzyLazzy">
                         <Icon icon="jam:twitter"
-                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                          width='100' color='white'
+                          onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
                           }}
@@ -246,7 +247,8 @@ function App() {
                       arrow>
                       <Link href="https://www.linkedin.com/in/yosef-adrian-aa8344194/">
                         <Icon icon="jam:linkedin"
-                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                          width='100' color='white'
+                          onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
                           }}
@@ -261,7 +263,8 @@ function App() {
                       arrow>
                       <Link href="https://discord.gg/user/Yosef Adrian#1866">
                         <Icon icon="jam:discord"
-                          width='100' color='#0BDEA0' onMouseEnter={({ target }) => {
+                          width='100' color='white'
+                          onMouseEnter={({ target }) => {
                             target.style.scale = 1.1
                             target.style.transition = 'all 0.4s ease'
                           }}
