@@ -1,6 +1,8 @@
 import {
     Card, Box, Grid, Typography, Link, Tooltip, Icon,
-} from '@mui/material'
+} from '@mui/material';
+import './Project.css';
+import cityNight from '../../assets/images/page/city-dark.jpg';
 
 // ------------------ End of Import ------------------
 
@@ -47,31 +49,46 @@ export default function ProjectSection() {
                                 padding: 4,
                                 marginLeft: 'auto',
                                 marginRight: 'auto'
-                            }}>
-                                <Typography variant='h5' sx={{
-                                    fontFamily: 'Rajdhani',
-                                    marginBottom: 2,
-                                    fontWeight: 'bold',
-                                }}>
-                                    {data.title}
-                                </Typography>
-                                <Typography variant='body1' sx={{
-                                }}>
-                                    {data.description}
-                                </Typography>
-                                <Box sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                }}>
-                                    <Tooltip title='Github Yozzy Lazzy'
-                                        placement="bottom"
-                                        arrow>
-                                        <Link href={data.link_image}>
-                                            {data.icon}
-                                        </Link>
-                                    </Tooltip>
-                                </Box>
+                            }} className='flippable-card'>
+                                <div className="card-front">
+                                    <Typography variant='h5' sx={{
+                                        fontFamily: 'Rajdhani',
+                                        marginBottom: 2,
+                                        fontWeight: 'bold',
+                                    }}>
+                                        {data.title}
+                                    </Typography>
+                                    <Typography variant='body1' sx={{
+                                    }}>
+                                        {data.description}
+                                    </Typography>
+                                </div>
+                                <div className='card-back'>
+                                    <Box sx={{
+                                        backgroundImage: `url(${cityNight})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}>
+                                        <Typography variant='h5' sx={{
+                                            fontFamily: 'Rajdhani',
+                                            marginBottom: 2,
+                                            fontWeight: 'bold',
+                                        }}>
+                                            {data.title}
+                                        </Typography>
+                                        <Typography variant='body1' sx={{
+                                        }}>
+                                            {data.description}
+                                        </Typography>
+                                        <Tooltip title='Github Yozzy Lazzy'
+                                            placement="bottom"
+                                            arrow>
+                                            <Link href={data.link_image}>
+                                                {data.icon}
+                                            </Link>
+                                        </Tooltip>
+                                    </Box>
+                                </div>
                             </Card>
                         </Grid>
                     )

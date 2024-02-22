@@ -1,0 +1,24 @@
+.flippable-card {
+  position: relative;
+  perspective: 1000px; 
+}
+
+.flippable-card:hover .card-front {
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease-in;
+}
+
+.flippable-card:hover .card-back {
+  transform: rotateY(0deg);
+  transition: transform 0.5s ease-out;
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden; 
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease;
+}

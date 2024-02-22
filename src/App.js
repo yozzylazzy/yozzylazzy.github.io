@@ -13,39 +13,9 @@ import { Icon } from '@iconify/react'
 import Introduction from './section/home/introduction';
 import Journey from './section/home/journey'
 import ProjectSection from './section/home/project'
-import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
+import { Parallax, ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
 
 // ------------------ End of Import ------------------
-
-const AnimeImage = () => {
-  const imageRef = useRef(null);
-  useEffect(() => {
-    const imageAnimation = anime({
-      targets: imageRef.current,
-      loop: true,
-      easing: 'linear',
-      opacity: [
-        { value: 0.8, duration: 100 },
-        { value: 0.3, duration: 200 },
-        { value: 0.8, duration: 200 }
-      ],
-      scale: [
-        { value: 1.05, duration: 100 },
-        { value: 1.1, duration: 200 },
-        { value: 1, duration: 200 }
-      ],
-      onScroll: true,
-    });
-
-    return () => {
-      imageAnimation.pause();
-    }
-  }, []);
-
-  return (
-    <img src={logo} className="App-logo" alt="logo" ref={imageRef} />
-  );
-}
 
 function App() {
   const [loading, setLoading] = React.useState(true);
