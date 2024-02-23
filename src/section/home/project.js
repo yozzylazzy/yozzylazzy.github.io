@@ -56,7 +56,8 @@ export default function ProjectSection() {
             {
                 dataProject.map((data, index) => {
                     return (
-                        <Grid item xs={12} md={4} className='project hidden'>
+                        <Grid item xs={12} md={4} className='project hidden'
+                            key={`project-${index}`}>
                             <Card sx={{
                                 borderRadius: 2,
                                 boxShadow: 3,

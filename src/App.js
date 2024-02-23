@@ -47,7 +47,6 @@ function App() {
   const scrollAnimation = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
         } else {
@@ -127,11 +126,11 @@ function App() {
                     marginRight: 5,
                   }}>
                     I'm a passionate <strong style={{
-                      color: '#D2ADF4'
+                      color: '#B991F5'
                     }}>Fullstack and Game Developer </strong>
                     with a solid foundation in
                     <strong style={{
-                      color: '#D2ADF4'
+                      color: '#B991F5'
                     }}> Computer Science</strong>
                   </Typography>
                 </Box>
