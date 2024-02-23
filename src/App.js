@@ -104,15 +104,15 @@ function App() {
                     sx={{
                       margin: 2
                     }}>
-                    <Icon icon="logos:google-developers" style={{ zIndex: 2 }}
-                      fontSize={45}
+                    <Icon icon="logos:google-developers" style={{ zIndex: 3 }}
+                      fontSize={45} className='logo-dev'
                     />
                     <Typography variant='h3' sx={{
                       zIndex: 3,
                       textAlign: { xs: 'center', md: 'left' },
                       fontFamily: 'Rajdhani',
                       fontSize: windowHeight > windowWidth ? '5vh' : '4vw',
-                    }}>
+                    }} className='greeting hidden'>
                       <strong>HELLO!</strong> I'M YOSEF ADRIAN
                     </Typography>
                   </Stack>
@@ -124,7 +124,7 @@ function App() {
                     marginBottom: 2,
                     marginLeft: 5,
                     marginRight: 5,
-                  }}>
+                  }} className='greeting hidden'>
                     I'm a passionate <strong style={{
                       color: '#B991F5'
                     }}>Fullstack and Game Developer </strong>
