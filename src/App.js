@@ -1,10 +1,8 @@
-import React, { useRef, useEffect, useState } from 'react'
-import logo from './logo.png'
+import React, { useEffect, useState } from 'react'
 import cityLight from './assets/images/page/city-light.jpeg';
 import './App.css'
-import anime from 'animejs'
 import {
-  Card, Container, Grid, Box, Typography, Link, Tooltip, Divider, Stack,
+  Card, Container, Grid, Box, Typography, Link, Tooltip, Divider, Chip, Stack,
 } from '@mui/material'
 import { CircularProgress } from "@mui/material"
 import { Icon } from '@iconify/react'
@@ -13,7 +11,8 @@ import { Icon } from '@iconify/react'
 import Introduction from './section/home/introduction';
 import Journey from './section/home/journey'
 import ProjectSection from './section/home/project'
-import { Parallax, ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
+import SocialMedia from './section/home/socialmedia';
 
 // ------------------ End of Import ------------------
 
@@ -36,12 +35,29 @@ function App() {
     }
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+    if (!loading) {
+      scrollAnimation();
+    }
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [loading]);
 
+  const scrollAnimation = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+  }
 
   return (
     <>
@@ -60,14 +76,14 @@ function App() {
         ) : (
           <>
             <ParallaxProvider>
-              <Parallax speed={10}>
+              <Parallax speed={10} className='hidden'>
                 <Box sx={{
                   flexGrow: 1,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
-                  height: windowHeight < windowWidth ? "90vh" : "90vh",
+                  height: "90vh",
                   padding: 2,
                   backgroundImage: `url(${cityLight})`,
                   backgroundSize: 'cover',
@@ -81,27 +97,42 @@ function App() {
                       position: 'absolute',
                       width: '100%',
                       height: '100%',
-                      background: 'linear-gradient(to top, rgba(24,7,51, 0.9), rgba(65,54,81, 0.1))',
+                      background: 'linear-gradient(to top, rgba(0,0,0, 0.9), rgba(24,7,51, 0.4))',
                     }}
                   ></div>
-                  <Typography variant='h3' sx={{
-                    marginTop: 2,
-                    marginBottom: 2,
-                    zIndex: 3,
-                    textAlign: { xs: 'center', md: 'left' },
-                    fontFamily: 'Rajdhani'
-                  }}>
-                    <strong>HELLO!</strong> I'M YOSEF ADRIAN👋
-                  </Typography>
+                  <Stack spacing={2} direction={'row'}
+                    alignItems={'center'} alignContent={'center'}
+                    sx={{
+                      margin: 2
+                    }}>
+                    <Icon icon="logos:google-developers" style={{ zIndex: 2 }}
+                      fontSize={45}
+                    />
+                    <Typography variant='h3' sx={{
+                      zIndex: 3,
+                      textAlign: { xs: 'center', md: 'left' },
+                      fontFamily: 'Rajdhani',
+                      fontSize: windowHeight > windowWidth ? '5vh' : '4vw',
+                    }}>
+                      <strong>HELLO!</strong> I'M YOSEF ADRIAN
+                    </Typography>
+                  </Stack>
                   <Typography variant="h5" sx={{
                     textAlign: { xs: 'center', md: 'center' },
                     fontFamily: 'Rajdhani',
                     zIndex: 3,
+                    fontSize: windowHeight > windowWidth ? '2.5vh' : '2vw',
+                    marginBottom: 2,
+                    marginLeft: 5,
+                    marginRight: 5,
                   }}>
-                    I'm a <strong>Fullstack Developer</strong> majoring in <strong>Computer Science</strong> and currently working on my Final Project for <strong>Bachelor</strong> degree.
-                    <br></br>
-                    <br></br>
-                    My speciality is in <strong>web, mobile, and game</strong> development.
+                    I'm a passionate <strong style={{
+                      color: '#D2ADF4'
+                    }}>Fullstack and Game Developer </strong>
+                    with a solid foundation in
+                    <strong style={{
+                      color: '#D2ADF4'
+                    }}> Computer Science</strong>
                   </Typography>
                 </Box>
               </Parallax>
@@ -132,122 +163,7 @@ function App() {
                 marginTop: 5,
                 marginBottom: 5,
               }} />
-              <Card sx={{
-                display: "flex",
-                float: "center",
-                justifyContent: "center",
-                padding: 10,
-                color: 'black',
-                marginLeft: 'auto',
-                marginRight: 'auto'
-              }}>
-                <Grid container spacing={3}
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}>
-                  <Grid item xs={4} sm={3} md={2}>
-                    <Tooltip title='Github Yozzy Lazzy'
-                      placement="bottom"
-                      arrow>
-                      <Link href="https://github.com/yozzylazzy">
-                        <Icon icon="jam:github"
-                          width='100'
-                          //  color='#0BDEA0'
-                          color='black'
-                          onMouseEnter={({ target }) => {
-                            target.style.scale = 1.1
-                            target.style.transition = 'all 0.4s ease'
-                          }}
-                          onMouseLeave={({ target }) =>
-                            target.style.scale = 1.0} />
-                      </Link>
-                    </Tooltip>
-
-                  </Grid>
-                  <Grid item xs={4} sm={3} md={2}>
-                    <Tooltip title='kristian_yosef@yahoo.com'
-                      placement="bottom"
-                      arrow>
-                      <Link href="mailto:kristian_yosef@yahoo.com">
-                        <Icon icon="jam:yahoo-square"
-                          width='100' color='black'
-                          onMouseEnter={({ target }) => {
-                            target.style.scale = 1.1
-                            target.style.transition = 'all 0.4s ease'
-                          }}
-                          onMouseLeave={({ target }) =>
-                            target.style.scale = 1.0} />
-                      </Link>
-                    </Tooltip>
-                  </Grid>
-                  <Grid item xs={4} sm={3} md={2}>
-                    <Tooltip title='@yosef_adrian'
-                      placement="bottom"
-                      arrow>
-                      <Link href="https://www.instagram.com/yosef_adrian/">
-                        <Icon icon="jam:instagram"
-                          width='100' color='black'
-                          onMouseEnter={({ target }) => {
-                            target.style.scale = 1.1
-                            target.style.transition = 'all 0.4s ease'
-                          }}
-                          onMouseLeave={({ target }) =>
-                            target.style.scale = 1.0} />
-                      </Link>
-                    </Tooltip>
-                  </Grid>
-                  <Grid item xs={4} sm={3} md={2}>
-                    <Tooltip title='@YozzyLazzy'
-                      placement="bottom"
-                      arrow>
-                      <Link href="https://twitter.com/YozzyLazzy">
-                        <Icon icon="jam:twitter"
-                          width='100' color='black'
-                          onMouseEnter={({ target }) => {
-                            target.style.scale = 1.1
-                            target.style.transition = 'all 0.4s ease'
-                          }}
-                          onMouseLeave={({ target }) =>
-                            target.style.scale = 1.0} />
-                      </Link>
-                    </Tooltip>
-                  </Grid>
-                  <Grid item xs={4} sm={3} md={2}>
-                    <Tooltip title='Yosef Adrian'
-                      placement="bottom"
-                      arrow>
-                      <Link href="https://www.linkedin.com/in/yosef-adrian-aa8344194/">
-                        <Icon icon="jam:linkedin"
-                          width='100' color='black'
-                          onMouseEnter={({ target }) => {
-                            target.style.scale = 1.1
-                            target.style.transition = 'all 0.4s ease'
-                          }}
-                          onMouseLeave={({ target }) =>
-                            target.style.scale = 1.0} />
-                      </Link>
-                    </Tooltip>
-                  </Grid>
-                  <Grid item xs={4} sm={2} md={2}>
-                    <Tooltip title='#yosefadrian'
-                      placement="bottom"
-                      arrow>
-                      <Link href="https://discord.gg/user/Yosef Adrian#1866">
-                        <Icon icon="jam:discord"
-                          width='100' color='black'
-                          onMouseEnter={({ target }) => {
-                            target.style.scale = 1.1
-                            target.style.transition = 'all 0.4s ease'
-                          }}
-                          onMouseLeave={({ target }) =>
-                            target.style.scale = 1.0} />
-                      </Link>
-                    </Tooltip>
-                  </Grid>
-                </Grid>
-              </Card>
+              <SocialMedia />
             </Container>
           </>
         )

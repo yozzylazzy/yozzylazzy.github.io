@@ -1,44 +1,12 @@
-.App {
-  text-align: center;
+.hidden{
+  opacity: 0;
+  filter: blur(7px);
+  transform: translateX(-100%);
+  transition: all 2s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #22252c;
-  min-height: 90vh;
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.carousel .thumb img {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.carousel .slide img {
-  max-height: 300px;  /* change this to whatever you want */
-  width: auto;
-}
-

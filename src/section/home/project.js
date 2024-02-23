@@ -3,6 +3,7 @@ import {
 } from '@mui/material';
 import './Project.css';
 import cityNight from '../../assets/images/page/city-dark.jpg';
+import { useEffect } from 'react';
 
 // ------------------ End of Import ------------------
 
@@ -34,15 +35,28 @@ const dataProject = [
 ]
 
 export default function ProjectSection() {
+
+    useEffect(() => {
+        projectScrollAnimationDelay();
+    });
+
+    const projectScrollAnimationDelay = () => {
+        const projects = document.querySelectorAll('.project');
+        projects.forEach((project, index) => {
+            const delay = (index + 1) * 100 + 'ms';
+            project.style.transitionDelay = delay;
+        });
+    };
+
     return (
         <Grid container spacing={2} sx={{
             marginTop: 3,
             marginBottom: 3,
-        }}>
+        }} className='hidden'>
             {
                 dataProject.map((data, index) => {
                     return (
-                        <Grid item xs={12} md={4}>
+                        <Grid item xs={12} md={4} className='project hidden'>
                             <Card sx={{
                                 borderRadius: 2,
                                 boxShadow: 3,

@@ -14,7 +14,7 @@ import SchoolIcon from '@mui/icons-material/School'
 
 export default function Journey() {
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className='hidden'>
             <Grid item xs={4}>
                 <Card sx={{
                     padding: 3
