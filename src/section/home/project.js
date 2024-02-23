@@ -44,7 +44,10 @@ export default function ProjectSection() {
         const projects = document.querySelectorAll('.project');
         projects.forEach((project, index) => {
             const delay = (index + 1) * 100 + 'ms';
-            project.style.transitionDelay = delay;
+            if (delay < 700) {
+                project.style.transitionDelay = delay;
+            }
+            project.style.transitionDelay = '700ms';
         });
     };
 
@@ -56,14 +59,13 @@ export default function ProjectSection() {
             {
                 dataProject.map((data, index) => {
                     return (
-                        <Grid item xs={12} md={4} className='project hidden'
+                        <Grid item xs={12} md={6} lg={4} className='project hidden'
                             key={`project-${index}`}>
                             <Card sx={{
                                 borderRadius: 2,
                                 boxShadow: 3,
                                 padding: 4,
-                                marginLeft: 'auto',
-                                marginRight: 'auto'
+                                height: 250,
                             }} className='flippable-card'>
                                 <div className="card-front">
                                     <Typography variant='h5' sx={{

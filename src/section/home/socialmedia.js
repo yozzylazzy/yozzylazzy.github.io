@@ -6,6 +6,10 @@ import './Socialmedia.css';
 
 // ------------------ End of Import ------------------
 
+const dataSocial = [
+
+];
+
 export default function SocialMedia() {
   return (
     <Card sx={{
@@ -23,7 +27,7 @@ export default function SocialMedia() {
           justifyContent: "center",
           alignItems: "center",
         }}>
-        <Grid item xs={4} sm={3} md={2} className='logo hidden'>
+        <Grid item xs={6} sm={3} md={2} className='logo hidden'>
           <Tooltip title='Github Yozzy Lazzy'
             placement="bottom"
             arrow>
@@ -42,7 +46,7 @@ export default function SocialMedia() {
           </Tooltip>
 
         </Grid>
-        <Grid item xs={4} sm={3} md={2} className='logo hidden'>
+        <Grid item xs={6} sm={3} md={2} className='logo hidden'>
           <Tooltip title='kristian_yosef@yahoo.com'
             placement="bottom"
             arrow>
@@ -58,7 +62,7 @@ export default function SocialMedia() {
             </Link>
           </Tooltip>
         </Grid>
-        <Grid item xs={4} sm={3} md={2} className='logo hidden'>
+        <Grid item xs={6} sm={3} md={2} className='logo hidden'>
           <Tooltip title='@yosef_adrian'
             placement="bottom"
             arrow>
@@ -74,7 +78,7 @@ export default function SocialMedia() {
             </Link>
           </Tooltip>
         </Grid>
-        <Grid item xs={4} sm={3} md={2} className='logo hidden'>
+        <Grid item xs={6} sm={3} md={2} className='logo hidden'>
           <Tooltip title='@YozzyLazzy'
             placement="bottom"
             arrow>
@@ -90,7 +94,7 @@ export default function SocialMedia() {
             </Link>
           </Tooltip>
         </Grid>
-        <Grid item xs={4} sm={3} md={2} className='logo hidden'>
+        <Grid item xs={6} sm={3} md={2} className='logo hidden'>
           <Tooltip title='Yosef Adrian'
             placement="bottom"
             arrow>
@@ -106,11 +110,11 @@ export default function SocialMedia() {
             </Link>
           </Tooltip>
         </Grid>
-        <Grid item xs={4} sm={2} md={2} className='logo hidden'>
+        <Grid item xs={6} sm={2} md={2} className='logo hidden'>
           <Tooltip title='#yosefadrian'
             placement="bottom"
             arrow>
-            <Link href="https://discord.gg/user/Yosef Adrian#1866">
+            <Link href="#1866">
               <Icon icon="jam:discord"
                 width='100' color='black'
                 onMouseEnter={({ target }) => {

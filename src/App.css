@@ -1,12 +1,16 @@
 .hidden{
   opacity: 0;
-  filter: blur(7px);
+  filter: blur(7px) opacity(0);
   transform: translateX(-100%);
-  transition: all 2s;
+  transition: all 1.5s;
 }
 
 .show {
   opacity: 1;
-  filter: blur(0);
+  filter: blur(0) opacity(100);
   transform: translateX(0);
+}
+
+.body {
+  font-family: 'Rajdhani';
 }

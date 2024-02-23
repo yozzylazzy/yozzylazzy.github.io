@@ -86,7 +86,7 @@ function App() {
                   padding: 2,
                   backgroundImage: `url(${cityLight})`,
                   backgroundSize: 'cover',
-                  backgroundPositionY: windowHeight < windowWidth ? `${(-90) + (scrollPosition / 5)}vh` : `${scrollPosition / 10}vh`,
+                  backgroundPositionY: windowHeight < windowWidth ? `${(scrollPosition / 20)}vh` : `${scrollPosition / 10}vh`,
                   backgroundPositionX: 'center',
                   backgroundRepeat: 'no-repeat',
                   color: 'white',

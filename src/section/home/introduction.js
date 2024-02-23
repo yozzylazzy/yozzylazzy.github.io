@@ -9,7 +9,7 @@ export default function Introduction() {
     return (
         <Card>
             <Grid container spacing={3} padding={3}>
-                <Grid item xs={12} md={3}
+                <Grid item xs={12} lg={3}
                     sx={{
                         display: "flex",
                         justifyContent: "center",
@@ -24,7 +24,7 @@ export default function Introduction() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} md={9} >
+                <Grid item xs={12} lg={9} >
                     <List sx={{
                         marginBottom: 1, marginRight: 4
                     }}>
@@ -33,7 +33,9 @@ export default function Introduction() {
                                 textAlign: 'justify',
                                 fontFamily: 'Rajdhani',
                             }}>
-                                I'm a <strong>Fullstack Developer</strong> majoring in <strong>Computer Science</strong> and currently working on my Final Project for <strong>Bachelor</strong> degree.
+                                I'm an Informatics Engineering graduate who builds engaging web and mobile applications.
+                                I focus on creating user-friendly interfaces, robust backends,
+                                and efficient mobile experiences.
                             </Typography>
                         </ListItem>
                         <ListItem>
@@ -41,7 +43,8 @@ export default function Introduction() {
                                 textAlign: 'justify',
                                 fontFamily: 'Rajdhani',
                             }}>
-                                My speciality is in <strong>web, mobile, and game</strong> development.
+                                Fuelled by a constant desire to learn and adapt, I delve into Blockchain,
+                                AI, and Game Development, exploring their potential to shape the future.
                             </Typography>
                         </ListItem>
                         <ListItem>
@@ -49,7 +52,8 @@ export default function Introduction() {
                                 textAlign: 'justify',
                                 fontFamily: 'Rajdhani',
                             }}>
-                                I also have a strong interest and expertise in <i><strong>Artificial Intelligence, Blockchain, Web 3.0, and UI/UX Design</strong></i>
+                                As a team player, I excel at communication and collaboration,
+                                effectively delegating tasks and resolving conflicts to ensure project success.
                             </Typography>
                         </ListItem>
                     </List>
