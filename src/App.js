@@ -99,7 +99,7 @@ function App() {
                       background: 'linear-gradient(to top, rgba(0,0,0, 0.9), rgba(24,7,51, 0.4))',
                     }}
                   ></div>
-                  <Stack spacing={2} direction={'row'}
+                  <Stack spacing={2} direction={windowWidth > 567 ? 'row' : 'column'}
                     alignItems={'center'} alignContent={'center'}
                     sx={{
                       margin: 2
