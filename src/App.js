@@ -75,18 +75,18 @@ function App() {
         ) : (
           <>
             <ParallaxProvider>
-              <Parallax speed={10} className='hidden'>
+              <Parallax speed={3} className='hidden'>
                 <Box sx={{
                   flexGrow: 1,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
-                  height: "90vh",
+                  height: "80vh",
                   padding: 2,
                   backgroundImage: `url(${cityLight})`,
                   backgroundSize: 'cover',
-                  backgroundPositionY: windowHeight < windowWidth ? `${(scrollPosition / 20)}vh` : `${scrollPosition / 10}vh`,
+                  backgroundPositionY: windowHeight < windowWidth ? `${(scrollPosition / 40)}vh` : `${scrollPosition / 40}vh`,
                   backgroundPositionX: 'center',
                   backgroundRepeat: 'no-repeat',
                   color: 'white',
@@ -99,71 +99,75 @@ function App() {
                       background: 'linear-gradient(to top, rgba(0,0,0, 0.9), rgba(24,7,51, 0.4))',
                     }}
                   ></div>
-                  <Stack spacing={2} direction={windowWidth > 567 ? 'row' : 'column'}
-                    alignItems={'center'} alignContent={'center'}
-                    sx={{
-                      margin: 2
-                    }}>
-                    <Icon icon="logos:google-developers" style={{ zIndex: 3 }}
-                      fontSize={45} className='logo-dev'
-                    />
-                    <Typography variant='h3' sx={{
-                      zIndex: 3,
-                      textAlign: { xs: 'center', md: 'left' },
+                  <Parallax speed={10}>
+                    <Stack spacing={2} direction={windowWidth > 567 ? 'row' : 'column'}
+                      alignItems={'center'} alignContent={'center'}
+                      sx={{
+                        margin: 2
+                      }}>
+                      <Icon icon="logos:google-developers" style={{ zIndex: 3 }}
+                        fontSize={45} className='logo-dev'
+                      />
+                      <Typography variant='h3' sx={{
+                        zIndex: 3,
+                        textAlign: { xs: 'center', md: 'left' },
+                        fontFamily: 'Rajdhani',
+                        fontSize: windowHeight > windowWidth ? '5vh' : '4vw',
+                      }} className='greeting hidden'>
+                        <strong>HELLO!</strong> I'M YOSEF ADRIAN
+                      </Typography>
+                    </Stack>
+                  </Parallax>
+                  <Parallax speed={10}>
+                    <Typography variant="h5" sx={{
+                      textAlign: { xs: 'center', md: 'center' },
                       fontFamily: 'Rajdhani',
-                      fontSize: windowHeight > windowWidth ? '5vh' : '4vw',
+                      zIndex: 3,
+                      fontSize: windowHeight > windowWidth ? '2.5vh' : '2vw',
+                      marginBottom: 2,
+                      marginLeft: 5,
+                      marginRight: 5,
                     }} className='greeting hidden'>
-                      <strong>HELLO!</strong> I'M YOSEF ADRIAN
+                      I'm a passionate <strong style={{
+                        color: '#B991F5'
+                      }}>Fullstack and Game Developer </strong>
+                      with a solid foundation in
+                      <strong style={{
+                        color: '#B991F5'
+                      }}> Computer Science</strong>
                     </Typography>
-                  </Stack>
-                  <Typography variant="h5" sx={{
-                    textAlign: { xs: 'center', md: 'center' },
-                    fontFamily: 'Rajdhani',
-                    zIndex: 3,
-                    fontSize: windowHeight > windowWidth ? '2.5vh' : '2vw',
-                    marginBottom: 2,
-                    marginLeft: 5,
-                    marginRight: 5,
-                  }} className='greeting hidden'>
-                    I'm a passionate <strong style={{
-                      color: '#B991F5'
-                    }}>Fullstack and Game Developer </strong>
-                    with a solid foundation in
-                    <strong style={{
-                      color: '#B991F5'
-                    }}> Computer Science</strong>
-                  </Typography>
+                  </Parallax>
                 </Box>
               </Parallax>
-            </ParallaxProvider>
-            <Container sx={{ marginTop: 5, marginBottom: 5 }}>
-              <Introduction />
-              <Divider
-                sx={{
+              <Container sx={{ marginTop: 5, marginBottom: 5 }}>
+                <Introduction />
+                <Divider
+                  sx={{
+                    marginTop: 5,
+                    marginBottom: 5,
+                  }} />
+                <Journey />
+                <Divider
+                  sx={{
+                    marginTop: 5,
+                    marginBottom: 5,
+                  }}
+                />
+                <Typography variant='h4' sx={{
+                  textAlign: 'center',
+                  fontFamily: 'Rajdhani',
+                  fontWeight: 'bold',
+                }}>
+                  PROJECT AND WORK
+                </Typography>
+                <ProjectSection />
+                <Divider sx={{
                   marginTop: 5,
                   marginBottom: 5,
                 }} />
-              <Journey />
-              <Divider
-                sx={{
-                  marginTop: 5,
-                  marginBottom: 5,
-                }}
-              />
-              <Typography variant='h4' sx={{
-                textAlign: 'center',
-                fontFamily: 'Rajdhani',
-                fontWeight: 'bold',
-              }}>
-                PROJECT AND WORK
-              </Typography>
-              <ProjectSection />
-              <Divider sx={{
-                marginTop: 5,
-                marginBottom: 5,
-              }} />
-              <SocialMedia />
-            </Container>
+                <SocialMedia />
+              </Container>
+            </ParallaxProvider>
           </>
         )
       }

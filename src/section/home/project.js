@@ -1,5 +1,5 @@
 import {
-    Card, Box, Grid, Typography, Link, Tooltip, Icon,
+    Card, Box, Grid, Typography, Link, Tooltip, Icon, Chip, Stack,
 } from '@mui/material';
 import './Project.css';
 import cityNight from '../../assets/images/page/city-dark.jpg';
@@ -70,8 +70,12 @@ export default function ProjectSection() {
                                 <div className="card-front">
                                     <Typography variant='h5' sx={{
                                         fontFamily: 'Rajdhani',
-                                        marginBottom: 2,
                                         fontWeight: 'bold',
+                                        overflow: 'hidden',
+                                        display: '-webkit-box',
+                                        WebkitLineClamp: 1,
+                                        WebkitBoxOrient: 'vertical',
+                                        marginBottom: 1,
                                     }}>
                                         {data.title}
                                     </Typography>
@@ -79,6 +83,27 @@ export default function ProjectSection() {
                                     }}>
                                         {data.description}
                                     </Typography>
+                                    <Stack direction={'row'} spacing={1}
+                                        alignContent={'start'} alignItems={'start'}>
+                                        <Chip label='2020' sx={{
+                                            fontWeight: 'bold',
+                                            color: '#7741FF',
+                                            borderColor: '#7741FF',
+                                            fontFamily: 'Rajdhani',
+                                        }} variant='outlined' />
+                                        <Chip label='Game' sx={{
+                                            fontWeight: 'bold',
+                                            color: '#7741FF',
+                                            borderColor: '#7741FF',
+                                            fontFamily: 'Rajdhani',
+                                        }} variant='outlined' />
+                                        <Chip label='2D' sx={{
+                                            fontWeight: 'bold',
+                                            color: '#7741FF',
+                                            borderColor: '#7741FF',
+                                            fontFamily: 'Rajdhani',
+                                        }} variant='outlined' />
+                                    </Stack>
                                 </div>
                                 <div className='card-back'>
                                     <Box sx={{

@@ -98,7 +98,7 @@ export default function SocialMedia() {
           <Tooltip title='Yosef Adrian'
             placement="bottom"
             arrow>
-            <Link href="https://www.linkedin.com/in/yosef-adrian-aa8344194/">
+            <Link href="https://www.linkedin.com/in/yosef-adrian/">
               <Icon icon="jam:linkedin"
                 width='100' color='black'
                 onMouseEnter={({ target }) => {
