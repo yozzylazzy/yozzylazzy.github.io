@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import cityLight from './assets/images/page/city-light.jpeg';
 import './App.css'
 import {
-  Card, Container, Grid, Box, Typography, Link, Tooltip, Divider, Chip, Stack,
+  Container, Box, Typography, Divider, Stack,
 } from '@mui/material'
 import { CircularProgress } from "@mui/material"
 import { Icon } from '@iconify/react'
