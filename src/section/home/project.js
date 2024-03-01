@@ -2,9 +2,18 @@ import {
     Card, Box, Grid, Typography, Link, Tooltip, Icon, Chip, Stack, CardContent, IconButton, ImageList, ImageListItem,
 } from '@mui/material';
 import './Project.css';
-import cityNight from '../../assets/images/page/city-dark.jpg';
+import {
+    daily_news_app,
+    forum_api,
+    lunatic,
+    restaurant_app,
+    new_year_2022,
+    garuda_laptop,
+    nexus_nextjs,
+    openmusic_api,
+    not_added
+} from '../../assets/images/project';
 import { useEffect } from 'react';
-import { Image } from '@mui/icons-material';
 
 // ------------------ End of Import ------------------
 
@@ -12,61 +21,61 @@ const dataProject = [
     {
         title: 'Nexus (Migration Tech)',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "../../assets/images/project/forum_api.png",
+        link_image: "",
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'Forum API (Dicoding BE Expert Project)',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "../../assets/images/project/forum_api.png",
+        link_image: forum_api,
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'Recommend Restaurant App',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "../../assets/images/project/forum_api.png",
+        link_image: restaurant_app,
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'International News App',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "../../assets/images/project/forum_api.png",
+        link_image: daily_news_app,
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'OpenMusic API (Dicoding Intermediate)',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "../../assets/images/project/forum_api.png",
+        link_image: openmusic_api,
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'Nexus (STMIK LIKMI Student Portal Academic)',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "../../assets/images/project/forum_api.png",
+        link_image: nexus_nextjs,
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'Garuda Laptop Website',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "../../assets/images/project/forum_api.png",
+        link_image: garuda_laptop,
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'Digital Library App',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "../../assets/images/project/forum_api.png",
+        link_image: not_added,
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'Happy New Year 2022 2D Game',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "../../assets/images/project/forum_api.png",
+        link_image: new_year_2022,
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'Lunatics (Ongoing Project)',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "../../assets/images/project/forum_api.png",
+        link_image: lunatic,
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
 ]
@@ -144,12 +153,16 @@ export default function ProjectSection() {
                                 <div className='card-back'>
                                     <Box sx={{
                                         height: 250,
+                                        alignContent: 'center',
+                                        alignItems: 'center',
                                     }}>
                                         <img
                                             style={{
-                                                objectFit: 'cover'
+                                                objectFit: 'cover',
                                             }}
-                                            src={data.link_image}
+                                            width={400}
+                                            height={300}
+                                            src={data.link_image.length < 1 ? not_added : data.link_image}
                                             loading='lazy'
                                         />
                                     </Box>
