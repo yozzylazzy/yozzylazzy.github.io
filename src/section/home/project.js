@@ -1,5 +1,5 @@
 import {
-    Card, Box, Grid, Typography, Icon, Chip, Stack, CardContent,
+    Card, Box, Grid, Typography, Icon, Chip, CardContent,
 } from '@mui/material';
 import './Project.css';
 import {
