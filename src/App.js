@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import cityLight from './assets/images/page/city-light.jpeg';
 import './App.css'
 import {
-  Container, Box, Typography, Divider, Stack,
+  Container, Box, Typography, Divider, Stack, Link,
 } from '@mui/material'
 import { CircularProgress } from "@mui/material"
 import { Icon } from '@iconify/react'
@@ -167,6 +167,21 @@ function App() {
                 }} />
                 <SocialMedia />
               </Container>
+              <Typography variant='body1' sx={{
+                textAlign: 'center',
+                fontFamily: 'Rajdhani',
+                fontWeight: 'bold',
+                marginBottom: 3,
+                color: '#6D1EEB',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+              }}>
+                <span>ORIGINAL DESIGN & CODED BY</span>
+                <Link href="https://github.com/yozzylazzy" color="inherit" underline="hover" target="_blank">YOZZYLAZZY</Link>
+                <span>@2024</span>
+              </Typography>
             </ParallaxProvider>
           </>
         )
