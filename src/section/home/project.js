@@ -154,6 +154,7 @@ export default function ProjectSection() {
                                 <div className='card-back'>
                                     <Box sx={{
                                         height: 250,
+                                        display: 'flex',
                                         alignContent: 'center',
                                         alignItems: 'center',
                                     }}
@@ -161,6 +162,8 @@ export default function ProjectSection() {
                                         <img
                                             style={{
                                                 objectFit: 'cover',
+                                                maxWidth: '100%',
+                                                maxHeight: '100%',
                                             }}
                                             alt={data.title}
                                             width={400}
