@@ -100,7 +100,7 @@ function App() {
                     }}
                   ></div>
                   <Parallax speed={10}>
-                    <Stack spacing={2} direction={windowWidth > 567 ? 'row' : 'column'}
+                    <Stack spacing={{ sm: 2, xs: 5 }} direction={windowWidth > 567 ? 'row' : 'column'}
                       alignItems={'center'} alignContent={'center'}
                       sx={{
                         margin: 2

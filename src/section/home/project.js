@@ -20,63 +20,74 @@ import { useEffect } from 'react';
 const dataProject = [
     {
         title: 'Nexus (Migration Tech)',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        description: 'Remaking Student Portal Academic from JS to PHP using Laravel-Filament Name Nexus.',
         link_image: "",
-        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />,
+        tag: ['web', 'php', 'laravel', 'portal', 'monolithic'],
     },
     {
         title: 'Forum API (Dicoding BE Expert Project)',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        description: 'Final Project from Dicoding Back-End Expert Class. Implement Automation Testing, CI/CD, and Test Driven Development',
         link_image: forum_api,
-        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />,
+        tag: ['backend', 'commonJS', 'HapiJS', 'authentication', 'automation testing', 'deploy', 'github workflow',
+            'JWT Token'],
     },
     {
         title: 'Recommend Restaurant App',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        description: 'Final Project from Dicoding Flutter Intermediate Class. Implement MediaQuery, Provider, and Automate Testing.',
         link_image: restaurant_app,
-        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />,
+        tag: ['flutter', 'mobile', 'iOS', 'web', 'automation testing', 'responsive design'],
     },
     {
         title: 'International News App',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        description: 'Project from Dicoding Flutter Intermediate Class. An App with News from newsapi.org,',
         link_image: daily_news_app,
-        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />,
+        tag: ['flutter', 'mobile', 'iOS', 'web', 'responsive design'],
     },
     {
         title: 'OpenMusic API (Dicoding Intermediate)',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        description: 'Final Project from Dicoding Back-End Intermediate Class. Implement authentication (JWT Token) and deployment.',
         link_image: openmusic_api,
-        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />,
+        tag: ['backend', 'commonJS', 'HapiJS', 'authentication', 'deploy', 'JWT Token'],
     },
     {
         title: 'Nexus (STMIK LIKMI Student Portal Academic)',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        description: 'A Microservice project for the new student academic portal using Next.JS and Mali.JS (gRPC) built in docker.',
         link_image: nexus_nextjs,
-        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />,
+        tag: ['full-stack', 'maliJS', 'NextJS', 'authentication', 'microservice', 'docker'],
     },
     {
         title: 'Garuda Laptop Website',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        description: 'A Project of e-commerce gadget for Garuda Laptop. Implement authentication, crud, token, and data analytic for admin.',
         link_image: garuda_laptop,
-        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />,
+        tag: ['full-stack', 'php', 'authentication', 'laravel', 'crud'],
     },
     {
         title: 'Digital Library App',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        description: 'Flutter project for mobile library which user can borrow/put back the book with QR Code Scanner, make it more tracked who the last borrow it.',
         link_image: not_added,
-        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />,
+        tag: ['flutter', 'mobile', 'iOS', 'web', 'responsive design', 'QR code', 'role-based application'],
     },
     {
         title: 'Happy New Year 2022 2D Game',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        description: 'Simple 2d game made using Unity Engine for celebrating New Year 2022. The concept of the game is 2D Shooter, player shooting the corona viruses.',
         link_image: new_year_2022,
-        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />,
+        tag: ['game', '2d', 'unity', '2d-shooter'],
     },
     {
         title: 'Lunatics (Ongoing Project)',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        description: 'A big project for SoftArts (Small Circle Indie Game Dev) for open world rpg game with some culture from Indonesia especially song, dress, and traditional weapon.',
         link_image: lunatic,
-        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />,
+        tag: ['game', '3d', 'unity', 'open-world RPG', 'blender', 'indonesian culture'],
     },
 ]
 
@@ -125,31 +136,29 @@ export default function ProjectSection() {
                                     }}>
                                         {data.title}
                                     </Typography>
-                                    <Typography variant='body1' sx={{
+                                    <Typography variant='body1' textAlign='justify' sx={{
                                     }}>
                                         {data.description}
                                     </Typography>
-                                    <Stack direction={'row'} spacing={1}
+                                    <Grid container spacing={1}
                                         alignContent={'start'} alignItems={'start'}>
-                                        <Chip label='2020' sx={{
-                                            fontWeight: 'bold',
-                                            color: '#7741FF',
-                                            borderColor: '#7741FF',
-                                            fontFamily: 'Rajdhani',
-                                        }} variant='outlined' />
-                                        <Chip label='Game' sx={{
-                                            fontWeight: 'bold',
-                                            color: '#7741FF',
-                                            borderColor: '#7741FF',
-                                            fontFamily: 'Rajdhani',
-                                        }} variant='outlined' />
-                                        <Chip label='2D' sx={{
-                                            fontWeight: 'bold',
-                                            color: '#7741FF',
-                                            borderColor: '#7741FF',
-                                            fontFamily: 'Rajdhani',
-                                        }} variant='outlined' />
-                                    </Stack>
+                                        <Grid item>
+                                            {
+                                                data.tag.map((tags) => {
+                                                    return (
+                                                        <Chip label={tags.toUpperCase()} sx={{
+                                                            fontWeight: 'bold',
+                                                            color: '#7741FF',
+                                                            borderColor: '#7741FF',
+                                                            fontFamily: 'Rajdhani',
+                                                            fontSize: '0.6em',
+                                                            margin: 0.3,
+                                                            borderRadius: 2.5,
+                                                        }} variant='outlined' />
+                                                    )
+                                                })}
+                                        </Grid>
+                                    </Grid>
                                 </CardContent>
                                 <div className='card-back'>
                                     <Box sx={{

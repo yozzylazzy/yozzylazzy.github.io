@@ -26,14 +26,17 @@ export default function Introduction() {
                 </Grid>
                 <Grid item xs={12} lg={9} >
                     <List sx={{
-                        marginBottom: 1, marginRight: 4
+                        marginBottom: 1
                     }}>
                         <ListItem>
                             <Typography variant='h5' sx={{
                                 textAlign: 'justify',
                                 fontFamily: 'Rajdhani',
                             }}>
-                                I'm an Informatics Engineering graduate who builds engaging web and mobile applications.
+                                I'm an <strong
+                                    style={{
+                                        color: '#6D1EEB'
+                                    }}>Informatics Engineering</strong> graduate who builds engaging web and mobile applications.
                                 I focus on creating user-friendly interfaces, robust backends,
                                 and efficient mobile experiences.
                             </Typography>
@@ -43,7 +46,9 @@ export default function Introduction() {
                                 textAlign: 'justify',
                                 fontFamily: 'Rajdhani',
                             }}>
-                                Fuelled by a constant desire to learn and adapt, I delve into Blockchain,
+                                Fuelled by a <strong style={{
+                                    color: '#6D1EEB'
+                                }}>constant desire to learn and adapt</strong>, I delve into Blockchain,
                                 AI, and Game Development, exploring their potential to shape the future.
                             </Typography>
                         </ListItem>
@@ -52,7 +57,9 @@ export default function Introduction() {
                                 textAlign: 'justify',
                                 fontFamily: 'Rajdhani',
                             }}>
-                                As a team player, I excel at communication and collaboration,
+                                As a team player, I excel at <strong style={{
+                                    color: '#6D1EEB'
+                                }}>communication and collaboration</strong>,
                                 effectively delegating tasks and resolving conflicts to ensure project success.
                             </Typography>
                         </ListItem>
