@@ -36,8 +36,11 @@ const dataEdukasi = [
         'tempat': 'STMIK LIKMI',
         'tahun': '2020 - 2024',
         'jenjang': 'Bachelor',
-        'deskripsi': `Complete a Bachelor's degree in Computer Science
-                      with a GPA of 4.00 and 145 out of 144 required credits within 3.5 years.`,
+        'deskripsi':
+            <>
+                Complete a <strong style={{ color: '#6D1EEB' }}>Bachelor's degree </strong>in Computer Science
+                with a GPA of 4.00 and 145 out of 144 required credits within 3.5 years.
+            </>,
         'proyekakhir': `Fake News Detection on Indonesian Language Using Passive Aggressive Classifier`,
     },
 ];
@@ -64,8 +67,8 @@ export default function Journey() {
                                         <Stack direction={'row'} spacing={3}
                                             alignContent={'center'} alignItems={'center'}>
                                             <Icon icon="mdi:academic-cap-outline" fontSize={35} />
-                                            <Stack direction={'row'} spacing={1.5}
-                                                alignContent={'center'} alignItems={'center'}>
+                                            <Stack direction={{ md: 'row', xs: 'column' }} spacing={{ md: 1.5, xs: 0.05 }}
+                                                alignContent={'center'} alignItems={{ md: 'center', xs: 'start' }}>
                                                 <Typography variant='h5' sx={{
                                                     fontFamily: 'Rajdhani',
                                                     fontWeight: 'bold',
@@ -78,6 +81,7 @@ export default function Journey() {
                                                     color: '#7741FF',
                                                     borderColor: '#7741FF',
                                                     fontFamily: 'Rajdhani',
+                                                    borderRadius: 3,
                                                 }} variant='outlined' />
                                             </Stack>
                                         </Stack>
@@ -123,8 +127,8 @@ export default function Journey() {
                                         <Stack direction={'row'} spacing={3}
                                             alignContent={'center'} alignItems={'center'}>
                                             <Icon icon="fluent-mdl2:work" fontSize={35} />
-                                            <Stack direction={'row'} spacing={1.5}
-                                                alignContent={'center'} alignItems={'center'}>
+                                            <Stack direction={{ md: 'row', xs: 'column' }} spacing={{ md: 1.5, xs: 0.05 }}
+                                                alignContent={'center'} alignItems={{ md: 'center', xs: 'start' }}>
                                                 <Typography variant='h5' sx={{
                                                     fontFamily: 'Rajdhani',
                                                     fontWeight: 'bold',
@@ -136,6 +140,7 @@ export default function Journey() {
                                                     color: '#7741FF',
                                                     borderColor: '#7741FF',
                                                     fontFamily: 'Rajdhani',
+                                                    borderRadius: 3,
                                                 }} variant='outlined' />
                                             </Stack>
                                         </Stack>
@@ -144,7 +149,9 @@ export default function Journey() {
                                             textAlign: 'justify',
                                             marginLeft: 7.5,
                                         }}>
-                                            Role: {pekerjaan.role}
+                                            Role: <strong style={{
+                                                color: '#6D1EEB'
+                                            }}>{pekerjaan.role}</strong>
                                         </Typography>
                                         <Typography variant='h6' sx={{
                                             fontFamily: 'Rajdhani',

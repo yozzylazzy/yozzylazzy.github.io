@@ -151,7 +151,8 @@ export default function ProjectSection() {
                                                             color: '#7741FF',
                                                             borderColor: '#7741FF',
                                                             fontFamily: 'Rajdhani',
-                                                            fontSize: '0.6em',
+                                                            fontSize: { xs: '0.3em', md: '0.6em' },
+
                                                             margin: 0.3,
                                                             borderRadius: 2.5,
                                                         }} variant='outlined' />
