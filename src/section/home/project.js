@@ -1,35 +1,72 @@
 import {
-    Card, Box, Grid, Typography, Link, Tooltip, Icon, Chip, Stack,
+    Card, Box, Grid, Typography, Link, Tooltip, Icon, Chip, Stack, CardContent, IconButton, ImageList, ImageListItem,
 } from '@mui/material';
 import './Project.css';
 import cityNight from '../../assets/images/page/city-dark.jpg';
 import { useEffect } from 'react';
+import { Image } from '@mui/icons-material';
 
 // ------------------ End of Import ------------------
 
 const dataProject = [
     {
+        title: 'Nexus (Migration Tech)',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        link_image: "../../assets/images/project/forum_api.png",
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+    },
+    {
+        title: 'Forum API (Dicoding BE Expert Project)',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        link_image: "../../assets/images/project/forum_api.png",
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+    },
+    {
+        title: 'Recommend Restaurant App',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        link_image: "../../assets/images/project/forum_api.png",
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+    },
+    {
+        title: 'International News App',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        link_image: "../../assets/images/project/forum_api.png",
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+    },
+    {
+        title: 'OpenMusic API (Dicoding Intermediate)',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        link_image: "../../assets/images/project/forum_api.png",
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+    },
+    {
+        title: 'Nexus (STMIK LIKMI Student Portal Academic)',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
+        link_image: "../../assets/images/project/forum_api.png",
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
+    },
+    {
         title: 'Garuda Laptop Website',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "yozzylazzy.github.com",
+        link_image: "../../assets/images/project/forum_api.png",
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'Digital Library App',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "",
+        link_image: "../../assets/images/project/forum_api.png",
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'Happy New Year 2022 2D Game',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "",
+        link_image: "../../assets/images/project/forum_api.png",
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
     {
         title: 'Lunatics (Ongoing Project)',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, tin',
-        link_image: "",
+        link_image: "../../assets/images/project/forum_api.png",
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em" />
     },
 ]
@@ -64,10 +101,9 @@ export default function ProjectSection() {
                             <Card sx={{
                                 borderRadius: 2,
                                 boxShadow: 3,
-                                padding: 4,
                                 height: 250,
                             }} className='flippable-card'>
-                                <div className="card-front">
+                                <CardContent className='card-front'>
                                     <Typography variant='h5' sx={{
                                         fontFamily: 'Rajdhani',
                                         fontWeight: 'bold',
@@ -104,31 +140,18 @@ export default function ProjectSection() {
                                             fontFamily: 'Rajdhani',
                                         }} variant='outlined' />
                                     </Stack>
-                                </div>
+                                </CardContent>
                                 <div className='card-back'>
                                     <Box sx={{
-                                        backgroundImage: `url(${cityNight})`,
-                                        backgroundSize: 'cover',
-                                        backgroundPosition: 'center',
+                                        height: 250,
                                     }}>
-                                        <Typography variant='h5' sx={{
-                                            fontFamily: 'Rajdhani',
-                                            marginBottom: 2,
-                                            fontWeight: 'bold',
-                                        }}>
-                                            {data.title}
-                                        </Typography>
-                                        <Typography variant='body1' sx={{
-                                        }}>
-                                            {data.description}
-                                        </Typography>
-                                        <Tooltip title='Github Yozzy Lazzy'
-                                            placement="bottom"
-                                            arrow>
-                                            <Link href={data.link_image}>
-                                                {data.icon}
-                                            </Link>
-                                        </Tooltip>
+                                        <img
+                                            style={{
+                                                objectFit: 'cover'
+                                            }}
+                                            src={data.link_image}
+                                            loading='lazy'
+                                        />
                                     </Box>
                                 </div>
                             </Card>
