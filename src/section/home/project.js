@@ -1,5 +1,5 @@
 import {
-    Card, Box, Grid, Typography, Link, Tooltip, Icon, Chip, Stack, CardContent, IconButton, ImageList, ImageListItem,
+    Card, Box, Grid, Typography, Icon, Chip, Stack, CardContent,
 } from '@mui/material';
 import './Project.css';
 import {
@@ -111,7 +111,8 @@ export default function ProjectSection() {
                                 borderRadius: 2,
                                 boxShadow: 3,
                                 height: 250,
-                            }} className='flippable-card'>
+                            }} className='flippable-card'
+                                key={`card-${data.title}`}>
                                 <CardContent className='card-front'>
                                     <Typography variant='h5' sx={{
                                         fontFamily: 'Rajdhani',
@@ -155,11 +156,13 @@ export default function ProjectSection() {
                                         height: 250,
                                         alignContent: 'center',
                                         alignItems: 'center',
-                                    }}>
+                                    }}
+                                        key={`box-${data.title}`}>
                                         <img
                                             style={{
                                                 objectFit: 'cover',
                                             }}
+                                            alt={data.title}
                                             width={400}
                                             height={300}
                                             src={data.link_image.length < 1 ? not_added : data.link_image}
