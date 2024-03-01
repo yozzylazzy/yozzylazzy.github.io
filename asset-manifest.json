@@ -1,18 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.a4d37872.css",
-    "main.js": "/static/js/main.7e7c5d95.js",
+    "main.js": "/static/js/main.778ddc13.js",
     "static/js/787.ae1743b3.chunk.js": "/static/js/787.ae1743b3.chunk.js",
     "static/media/city-light.jpeg": "/static/media/city-light.86e948d76f2d607fda9f.jpeg",
     "static/media/user-curious.jpeg": "/static/media/user-curious.14660bb5382f3617c4bf.jpeg",
-    "static/media/city-dark.jpg": "/static/media/city-dark.f7cdd03694a37ec3f3dd.jpg",
+    "static/media/garuda_laptop.png": "/static/media/garuda_laptop.c1f7d210eda70e2c8afd.png",
+    "static/media/restaurant_app.jpg": "/static/media/restaurant_app.08ba15559c5367011d90.jpg",
+    "static/media/lunatic.png": "/static/media/lunatic.0db7b37e20334ef55627.png",
+    "static/media/openmusic_api.png": "/static/media/openmusic_api.8ac127a45ba3df3c5d09.png",
+    "static/media/forum_api.png": "/static/media/forum_api.f421c91006367ff14e85.png",
+    "static/media/daily_news_app.jpg": "/static/media/daily_news_app.67cc9aa822330b5bcfb5.jpg",
+    "static/media/new_year_2022.png": "/static/media/new_year_2022.0d4ec5df818a12f3d8f2.png",
+    "static/media/not_added.jpg": "/static/media/not_added.6d1849e929ea579ab486.jpg",
+    "static/media/nexus_nextjs.jpg": "/static/media/nexus_nextjs.b4d5a29d9d0b857c8195.jpg",
     "index.html": "/index.html",
     "main.a4d37872.css.map": "/static/css/main.a4d37872.css.map",
-    "main.7e7c5d95.js.map": "/static/js/main.7e7c5d95.js.map",
+    "main.778ddc13.js.map": "/static/js/main.778ddc13.js.map",
     "787.ae1743b3.chunk.js.map": "/static/js/787.ae1743b3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4d37872.css",
-    "static/js/main.7e7c5d95.js"
+    "static/js/main.778ddc13.js"
   ]
 }
