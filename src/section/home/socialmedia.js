@@ -3,14 +3,17 @@ import {
 } from '@mui/material'
 import { Icon } from '@iconify/react'
 import './Socialmedia.css';
+import { useTheme } from '@mui/material/styles';
 
 // ------------------ End of Import ------------------
 
-const dataSocial = [
+// const dataSocial = [
 
-];
+// ];
 
 export default function SocialMedia() {
+  const theme = useTheme();
+
   return (
     <Card sx={{
       display: "flex",
@@ -34,8 +37,7 @@ export default function SocialMedia() {
             <Link href="https://github.com/yozzylazzy">
               <Icon icon="jam:github"
                 width='100'
-                //  color='#0BDEA0'
-                color='black'
+                color={theme.palette.text.primary}
                 onMouseEnter={({ target }) => {
                   target.style.scale = 1.1
                   target.style.transition = 'all 0.4s ease'
@@ -52,7 +54,7 @@ export default function SocialMedia() {
             arrow>
             <Link href="mailto:kristian_yosef@yahoo.com">
               <Icon icon="jam:yahoo-square"
-                width='100' color='black'
+                width='100' color={theme.palette.text.primary}
                 onMouseEnter={({ target }) => {
                   target.style.scale = 1.1
                   target.style.transition = 'all 0.4s ease'
@@ -68,7 +70,7 @@ export default function SocialMedia() {
             arrow>
             <Link href="https://www.instagram.com/yosef_adrian/">
               <Icon icon="jam:instagram"
-                width='100' color='black'
+                width='100' color={theme.palette.text.primary}
                 onMouseEnter={({ target }) => {
                   target.style.scale = 1.1
                   target.style.transition = 'all 0.4s ease'
@@ -84,7 +86,7 @@ export default function SocialMedia() {
             arrow>
             <Link href="https://twitter.com/YozzyLazzy">
               <Icon icon="jam:twitter"
-                width='100' color='black'
+                width='100' color={theme.palette.text.primary}
                 onMouseEnter={({ target }) => {
                   target.style.scale = 1.1
                   target.style.transition = 'all 0.4s ease'
@@ -100,7 +102,7 @@ export default function SocialMedia() {
             arrow>
             <Link href="https://www.linkedin.com/in/yosef-adrian/">
               <Icon icon="jam:linkedin"
-                width='100' color='black'
+                width='100' color={theme.palette.text.primary}
                 onMouseEnter={({ target }) => {
                   target.style.scale = 1.1
                   target.style.transition = 'all 0.4s ease'
@@ -116,7 +118,7 @@ export default function SocialMedia() {
             arrow>
             <Link href="#1866">
               <Icon icon="jam:discord"
-                width='100' color='black'
+                width='100' color={theme.palette.text.primary}
                 onMouseEnter={({ target }) => {
                   target.style.scale = 1.1
                   target.style.transition = 'all 0.4s ease'
