@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a4d37872.css",
-    "main.js": "/static/js/main.093e947d.js",
+    "main.js": "/static/js/main.68afe7e8.js",
     "static/js/787.1b9c8523.chunk.js": "/static/js/787.1b9c8523.chunk.js",
     "static/media/city-light.jpeg": "/static/media/city-light.86e948d76f2d607fda9f.jpeg",
     "static/media/user-curious.jpeg": "/static/media/user-curious.14660bb5382f3617c4bf.jpeg",
@@ -12,15 +12,16 @@
     "static/media/forum_api.png": "/static/media/forum_api.f421c91006367ff14e85.png",
     "static/media/daily_news_app.jpg": "/static/media/daily_news_app.67cc9aa822330b5bcfb5.jpg",
     "static/media/new_year_2022.png": "/static/media/new_year_2022.0d4ec5df818a12f3d8f2.png",
+    "static/media/quickfy.png": "/static/media/quickfy.fedc4a4bda862d37935b.png",
     "static/media/not_added.jpg": "/static/media/not_added.6d1849e929ea579ab486.jpg",
     "static/media/nexus_nextjs.jpg": "/static/media/nexus_nextjs.b4d5a29d9d0b857c8195.jpg",
     "index.html": "/index.html",
     "main.a4d37872.css.map": "/static/css/main.a4d37872.css.map",
-    "main.093e947d.js.map": "/static/js/main.093e947d.js.map",
+    "main.68afe7e8.js.map": "/static/js/main.68afe7e8.js.map",
     "787.1b9c8523.chunk.js.map": "/static/js/787.1b9c8523.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4d37872.css",
-    "static/js/main.093e947d.js"
+    "static/js/main.68afe7e8.js"
   ]
 }
