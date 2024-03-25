@@ -7,6 +7,7 @@ import garuda_laptop from './garuda_laptop.png';
 import nexus_nextjs from './nexus_nextjs.jpg';
 import openmusic_api from './openmusic_api.png';
 import not_added from './not_added.jpg';
+import quickfy from './quickfy.png';
 
 export {
   lunatic,
@@ -17,5 +18,6 @@ export {
   garuda_laptop,
   nexus_nextjs,
   openmusic_api,
-  not_added
+  not_added,
+  quickfy,
 };

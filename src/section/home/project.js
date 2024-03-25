@@ -11,13 +11,21 @@ import {
     garuda_laptop,
     nexus_nextjs,
     openmusic_api,
-    not_added
+    not_added,
+    quickfy
 } from '../../assets/images/project';
 import { useEffect } from 'react';
 
 // ------------------ End of Import ------------------
 
 const dataProject = [
+    {
+        title: 'Quickfy (SaaS AI Image Editor)',
+        description: 'A project of Software as a Service from JS MAstery Course, making SaaS AI Image Editor with Clerk, Cloudinary, and Stripe',
+        link_image: quickfy,
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em"/>,
+        tag: ['web', 'saas', 'ai', 'image-editor', 'next.js', 'clerk', 'cloudinary', 'shadcn', 'tailwind', 'webhooks','mongodb'],
+    },
     {
         title: 'Nexus (Migration Tech)',
         description: 'Remaking Student Portal Academic from JS to PHP using Laravel-Filament Name Nexus.',
