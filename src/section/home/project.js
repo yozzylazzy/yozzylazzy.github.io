@@ -20,8 +20,22 @@ import { useEffect } from 'react';
 
 const dataProject = [
     {
+        title: 'Digital Invitation',
+        description: 'A project for digital invitation for wedding, using NextJS and Google Sheets with responsive web design',
+        link_image: quickfy,
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em"/>,
+        tag: ['web', 'google sheets', 'next.js', 'responsive', 'mobile first approach'],
+    },
+    {
+        title: 'Aora (Youtube Clone React Native Project)',
+        description: 'A project for youtube/tiktok clone using react native for mobile application with streaming videos data',
+        link_image: quickfy,
+        icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em"/>,
+        tag: ['react-native', 'multi-platform','appwrite', 'videos-streaming', 'youtube-like'],
+    },
+    {
         title: 'Quickfy (SaaS AI Image Editor)',
-        description: 'A project of Software as a Service from JS MAstery Course, making SaaS AI Image Editor with Clerk, Cloudinary, and Stripe',
+        description: 'A project of Software as a Service, making SaaS AI Image Editor with Clerk, Cloudinary, and Stripe',
         link_image: quickfy,
         icon: <Icon icon="akar-icons:github-fill" color="#000" width="1.5em" height="1.5em"/>,
         tag: ['web', 'saas', 'ai', 'image-editor', 'next.js', 'clerk', 'cloudinary', 'shadcn', 'tailwind', 'webhooks','mongodb'],
